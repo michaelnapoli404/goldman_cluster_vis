@@ -57,7 +57,7 @@ Just change the values in quotes and run the launcher again.
 
 ---
 
-## Developer Usage
+## Basic Usage
 
 ### Installation
 
@@ -152,7 +152,7 @@ make all-checks
 make test
 ```
 
-## Documentation
+## Documentation and Advanced Usage
 
 For detailed documentation including:
 - Complete API reference
