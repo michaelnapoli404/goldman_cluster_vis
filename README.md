@@ -7,18 +7,58 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Type Checked: mypy](https://img.shields.io/badge/type--checked-mypy-blue)](https://mypy-lang.org/)
 
-Wave Visualizer is a Python package designed for analyzing longitudinal survey data, particularly for political science research with multiple survey waves.
+Wave Visualizer is a professional Python package designed for analyzing longitudinal survey data, particularly for political science research with multiple survey waves.
 
-## Features
+## No-Code Usage (Recommended for Non-Programmers)
 
-- **Dynamic Wave Configuration**: Support for unlimited survey waves with automatic detection
-- **Semantic Color Mapping**: Consistent, meaningful color assignments for categorical variables  
-- **Interactive Visualizations**: Alluvial plots (Sankey diagrams) for transition analysis
-- **Export System**: HTML and high-resolution image export with automatic organization
-- **Data Cleaning Pipeline**: Comprehensive preprocessing for SPSS (.sav) files
-- **Type-Safe APIs**: Full type hints and IDE support
+**Want to create visualizations without coding?** Use our simple launcher scripts!
 
-## Quick Start
+### Quick Start - No Coding Required
+
+1. **Download this project** (green "Code" button -> "Download ZIP")
+2. **Extract the ZIP file** to your computer
+3. **Double-click the launcher** for your operating system:
+   - **Windows**: Double-click `no_code/run_examples.bat`
+   - **Mac/Linux**: Double-click `no_code/run_examples.sh`
+
+**That's it!** The script will:
+- **Automatically find or guide you to install conda** (if needed)
+- **Set up the complete environment** automatically
+- **Run all example visualizations** and save them as interactive HTML files
+- **Generate 9 political analysis visualizations** (Democrat, Republican, Independent)
+
+### What You Get
+
+The launcher creates these professional visualizations in the `example_visualizations/exports/` folder:
+
+**For Each Political Party (Democrat, Republican, Independent):**
+- **Alluvial Plots**: Flow diagrams showing how people transition between psychological categories
+- **Heatmaps**: Percentage-based transition matrices with color intensity  
+- **Pattern Analysis**: Ranked bar charts showing the most common transitions
+
+**File Formats:**
+- Interactive HTML files (open in any web browser)
+- High-resolution PNG images (perfect for presentations)
+
+### Customizing Your Analysis
+
+Want to analyze different groups or variables? Simply edit the Python files in `example_visualizations/`:
+
+```python
+# Example: Change from 'Republican' to 'Independent'
+wave_visualizer.create_alluvial_visualization(
+    variable_name='HFClust_labeled', 
+    wave_config='w1_to_w3', 
+    filter_column='PID1_labeled', 
+    filter_value='Independent'  # <-- Change this
+)
+```
+
+**No programming experience needed!** Just change the values in quotes and run the launcher again.
+
+---
+
+## Developer Usage
 
 ### Installation
 
@@ -46,64 +86,61 @@ fig, stats = wave_visualizer.create_alluvial_visualization(
 wave_visualizer.export_figure(fig, 'republican_transition', ['html', 'png'])
 ```
 
-### Configuration
+## Features
+
+- **Dynamic Wave Configuration**: Support for unlimited survey waves with automatic detection
+- **Semantic Color Mapping**: Consistent, meaningful color assignments for categorical variables  
+- **Interactive Visualizations**: 
+  - Alluvial plots (Sankey diagrams) with separate wave nodes
+  - Percentage-based heatmaps with red colorscale
+  - Horizontal bar pattern analysis with stability color coding
+- **Export System**: HTML and high-resolution image export with automatic organization
+- **Data Cleaning Pipeline**: Comprehensive preprocessing for SPSS (.sav) files
+- **Type-Safe APIs**: Full type hints and IDE support
+- **No-Code Solution**: Simple launcher scripts for non-technical users 
+
+## Configuration
 
 ```python
-# Add custom color mappings
-wave_visualizer.add_color_mapping('Republican', '#FF0000')
-wave_visualizer.add_color_mapping('Democrat', '#0000FF')
-
-# Define new wave transitions
-wave_visualizer.add_wave_definition('W4', 'w4_to_w5')
+# Example: Custom analysis configuration
+wave_visualizer.create_alluvial_visualization(
+    variable_name='HFClust_labeled',    # Variable to analyze
+    wave_config='w1_to_w3',             # Wave transition
+    filter_column='PID1_labeled',       # Filter by column  
+    filter_value='Independent',         # Filter value
+    show_plot=True                      # Display immediately
+)
 ```
-
-## No-Code Usage
-
-**For non-programmers:** Use the `no_code/` folder to run visualizations without writing any code.
-
-### Setup (One-time)
-1. **Install Anaconda or Miniconda** from [anaconda.com](https://www.anaconda.com/products/distribution)
-2. **Add your data file:**
-   - Place `Ordered UC Berkeley W1_W2_W3 COMMON FILE.sav` in the main project `data/` folder
-
-*Note: The conda environment will be created automatically when you first run the examples.*
-
-### Run Examples
-Navigate to the `no_code/` folder and:
-
-- **Windows:** Double-click `run_examples.bat`
-- **Mac/Linux:** Double-click `run_examples.sh`
-
-### View Results
-Check `example_visualizations/exports/` for:
-- `.html` files - Interactive charts (open in web browser)
-- `.png` files - High-resolution images for presentations
-
-The no-code solution automatically runs all example visualizations and exports them in multiple formats. The scripts include robust error handling and will guide you through any setup issues.
-
-**Customization:** You can edit the Python files in `example_visualizations/` fairly intuitively to create your own visualizations - just modify the variable names, wave configurations, or filter settings to analyze different aspects of your data.
 
 ## Example Output
 
 The package generates interactive visualizations showing how survey responses transition between waves:
 
 ```
-Wave 1 → Wave 3 Transitions (Republican Subset)
+Wave 1 -> Wave 3 Transitions (Republican Subset)
 ├── Stable patterns: 65%
 ├── Changed responses: 30% 
 └── Missing data: 5%
 ```
 
-See `example_visualizations/simple_demo.py` for a complete working example.
+See `example_visualizations/political_w1_w3.py` for a complete working example generating 9 visualizations.
 
 ## Project Structure
 
 ```
 wave_visualizer/
-├── data_prep/          # Data cleaning and preprocessing
-├── visualization_techs/ # Visualization generation
-├── settings/           # Configuration and processed data
-└── utils/              # Logging and utilities
+├── data_prep/               # Data cleaning and preprocessing
+│   ├── cleaning/           # Cleaning pipeline components
+│   ├── customization.py    # Color and style configuration
+│   └── export_handler.py   # Export functionality
+├── visualization_techs/     # Visualization generation
+│   ├── alluvial_plots.py   # Alluvial/Sankey diagrams
+│   ├── heatmaps.py         # Transition heatmaps
+│   └── transition_pattern_analysis.py  # Pattern bar charts
+├── settings/               # Configuration and processed data
+├── utils/                  # Logging and utilities
+├── example_visualizations/ # Ready-to-run examples
+└── no_code/               # No-code launcher scripts
 ```
 
 ## Requirements
@@ -144,7 +181,6 @@ Your SPSS data should have:
 
 ## Support
 
-- Issues: [GitHub Issues](https://github.com/michaelnapoli404/wave-visualizer/issues)
 - Documentation: [`documentation.txt`](documentation.txt)
 - Examples: [`example_visualizations/`](example_visualizations/)
 
