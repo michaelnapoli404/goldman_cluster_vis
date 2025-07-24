@@ -74,7 +74,8 @@ ehthumbs.db
 Thumbs.db
 
 # Project-specific
-data/
+data/*
+!data/.gitkeep
 example_visualizations/exports/
 *.sav
 *.csv
