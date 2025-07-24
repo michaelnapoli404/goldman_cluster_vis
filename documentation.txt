@@ -5,15 +5,16 @@
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Installation & Setup](#installation--setup)
-3. [No-Code Usage](#no-code-usage)
-4. [API Reference](#api-reference)
-5. [Visualization Types](#visualization-types)
-6. [Configuration System](#configuration-system)
-7. [Data Processing Pipeline](#data-processing-pipeline)
-8. [Export System](#export-system)
-9. [Development Guide](#development-guide)
-10. [Architecture Details](#architecture-details)
+2. [Settings System Architecture](#settings-system-architecture)
+3. [Installation & Setup](#installation--setup)
+4. [No-Code Usage](#no-code-usage)
+5. [API Reference](#api-reference)
+6. [Visualization Types](#visualization-types)
+7. [Configuration System](#configuration-system)
+8. [Data Processing Pipeline](#data-processing-pipeline)
+9. [Export System](#export-system)
+10. [Development Guide](#development-guide)
+11. [Architecture Details](#architecture-details)
 
 ## Overview
 
@@ -36,6 +37,199 @@ Wave Visualizer is a professional-grade Python package designed for analyzing lo
 - **Improved Pattern Analysis**: Horizontal bar charts with green/orange color coding for stable/changed patterns
 - **Automatic Installation**: No-code launchers now automatically install conda if needed
 - **Simplified Export Paths**: Automatic detection of example_visualizations directory
+
+## Settings System Architecture
+
+The Wave Visualizer package uses a settings system with three distinct categories of CSV configuration files. Understanding these categories is essential for proper customization and maintenance.
+
+### Three Categories of Settings Files
+
+#### 1. AUTO-GENERATED (No User Input Required)
+
+These files are automatically created by Python from your data. They require no manual editing and are regenerated whenever you run the data cleaning pipeline.
+
+**Location**: `wave_visualizer/settings/metadata_output/`
+
+**a) variable_labels.csv**
+- **Created by**: `metadata_handler.py` during data cleaning
+- **Purpose**: Maps SPSS variable names to their descriptive labels
+- **Structure**:
+  ```csv
+  variable_name,variable_label
+  Respid,
+  ppcmdate,Date member completed survey
+  WAVE,Wave of Respondent
+  HFClust_labeled,Health & Finance Cluster Labels
+  ```
+- **Contains**: Variable name and its human-readable description
+- **Updated**: Automatically every time you run the data cleaning pipeline
+- **User Action**: None required - do not edit manually
+
+**b) value_labels.csv**
+- **Created by**: `metadata_handler.py` during data cleaning
+- **Purpose**: Maps numeric codes to their descriptive text labels for categorical variables
+- **Structure**:
+  ```csv
+  variable_name,value,value_label
+  WAVE,1.0,Wave 1 only
+  WAVE,2.0,Wave 2 only
+  HUMFL1,0.0,0 - Extremely negative (Unhappy)
+  HUMFL1,5.0,5 - Neither
+  PID1_labeled,1.0,Republican
+  PID1_labeled,2.0,Democrat
+  ```
+- **Contains**: Variable name, original numeric value, and descriptive label
+- **Updated**: Automatically extracted from SPSS metadata
+- **User Action**: None required - these preserve your original SPSS value labels
+
+#### 2. HARDCODED (Pre-configured by Developers)
+
+These files contain core system configurations that define how the package operates. They can be edited by users for customization but come with sensible defaults.
+
+**Location**: `wave_visualizer/settings/visualization_settings/`
+
+**a) wave_definitions.csv**
+- **Purpose**: Defines available survey waves and their column prefixes
+- **Structure**:
+  ```csv
+  wave_name,column_prefix,description
+  Wave1,W1_,First wave data collection
+  Wave2,W2_,Second wave data collection
+  Wave3,W3_,Third wave data collection
+  ```
+- **How to Use**: Add new rows for additional waves
+  ```csv
+  Wave4,W4_,Fourth wave data collection
+  Wave5,W5_,Fifth wave data collection
+  ```
+- **User Action**: Edit to add support for additional survey waves (W4, W5, etc.)
+
+**b) value_color_mappings.csv**
+- **Purpose**: Assigns specific colors to categorical values for consistent visualization
+- **Structure**:
+  ```csv
+  variable_name,value_name,color_hex,description
+  PID1_labeled,Republican,#d62728,Color for Republican
+  PID1_labeled,Democrat,#1f77b4,Color for Democrat
+  PID1_labeled,Independent,#2ca02c,Color for Independent
+  PID1_labeled,Strong Republican,#d62728,Color for Strong Republican
+  ```
+- **How to Use**: Add color mappings for your specific variables
+  ```csv
+  # Add new mappings for different variables
+  education_level,High School,#ff7f0e,Orange for high school
+  education_level,College,#2ca02c,Green for college
+  education_level,Graduate,#1f77b4,Blue for graduate
+  ```
+- **User Action**: Customize colors for your categorical variables to ensure consistent visualization themes
+
+#### 3. USER-GUIDED (Generated Through Interactive Process)
+
+These files store user decisions made during interactive data cleaning sessions. Python creates them based on your choices, and they persist your preferences for future use.
+
+**Location**: `wave_visualizer/settings/cleaning_settings/`
+
+**a) missing_value_settings.csv**
+- **Created by**: `value_missing_and_dropping_handler.py` during interactive cleaning
+- **Purpose**: Stores user decisions about which values to treat as missing/invalid
+- **Structure**:
+  ```csv
+  column,strategy,custom_label,impute_method,impute_value
+  ppcmdate,mark_unknown,Unknown,,
+  wave2_wt,mark_unknown,Unknown,,
+  income_level,drop_rows,,,
+  age_group,impute_mode,,mode,
+  ```
+- **Contains**: Column name, handling strategy, and imputation parameters
+- **How Created**: During interactive cleaning, you specify:
+  - Which values should be treated as missing (e.g., -999, "Prefer not to say")
+  - Whether to drop rows, mark as unknown, or impute values
+  - Imputation method if applicable (mean, mode, median, custom value)
+- **User Action**: Generated automatically during guided cleaning - no manual editing needed
+
+**b) value_merging_settings.csv**
+- **Created by**: `value_merging_handler.py` during interactive cleaning
+- **Purpose**: Stores user decisions about combining similar response categories
+- **Structure**:
+  ```csv
+  column_name,source_value,target_value
+  PID1,Something else,Independent
+  PID1,Other,Independent
+  PID1,Strong Democrat,Democrat
+  PID1,Weak Democrat,Democrat
+  party_affiliation,No preference,Independent
+  ```
+- **Contains**: Original value names and what they should be merged into
+- **How Created**: During interactive cleaning, you specify:
+  - Which categories should be combined (e.g., "Strong Democrat" + "Weak Democrat" -> "Democrat")
+  - How to handle "Other" or ambiguous responses
+  - Standardization of similar categories across waves
+- **User Action**: Generated automatically during guided cleaning - no manual editing needed
+
+### How to Use Each Type
+
+#### Working with Auto-Generated Files
+```python
+# These are created automatically - just run data cleaning
+from wave_visualizer.data_prep.cleaning import DataCleaningPipeline
+pipeline = DataCleaningPipeline()
+pipeline.run_full_pipeline("your_data.sav", interactive=True)
+# variable_labels.csv and value_labels.csv are now created/updated
+```
+
+#### Working with Hardcoded Files
+```python
+# Method 1: Edit CSV files directly
+# Open wave_visualizer/settings/visualization_settings/wave_definitions.csv
+# Add: Wave4,W4_,Fourth wave data collection
+
+# Method 2: Use Python functions
+import wave_visualizer
+wave_visualizer.add_wave_definition('Wave4', 'W4_', 'Fourth wave data collection')
+wave_visualizer.add_color_mapping('education_level', 'Graduate', '#1f77b4', 'Blue for graduate degree')
+```
+
+#### Working with User-Guided Files
+```python
+# These are created during interactive cleaning sessions
+pipeline = DataCleaningPipeline()
+success = pipeline.run_full_pipeline(
+    data_file_path="your_data.sav",
+    interactive=True  # This enables user guidance
+)
+# You'll be prompted to make decisions about:
+# - Which values to treat as missing
+# - How to merge similar categories
+# - Your choices are saved in missing_value_settings.csv and value_merging_settings.csv
+```
+
+### File Management Best Practices
+
+1. **Auto-Generated Files**: Never edit manually - regenerate by running data cleaning
+2. **Hardcoded Files**: Edit carefully and keep backups - these affect core functionality
+3. **User-Guided Files**: Delete to reset preferences and run interactive cleaning again
+4. **Version Control**: Include hardcoded files in git, exclude auto-generated files
+5. **Backup Strategy**: Keep copies of user-guided files before major data pipeline changes
+
+### Settings File Dependencies
+
+```
+Data Cleaning Pipeline
+├── Reads: Raw SPSS data
+├── Creates: variable_labels.csv (auto-generated)
+├── Creates: value_labels.csv (auto-generated)
+├── Uses: missing_value_settings.csv (if exists)
+├── Uses: value_merging_settings.csv (if exists)
+└── Outputs: processed_data.csv
+
+Visualization System
+├── Reads: processed_data.csv
+├── Uses: wave_definitions.csv (hardcoded)
+├── Uses: value_color_mappings.csv (hardcoded)
+└── Outputs: Interactive visualizations
+```
+
+This three-tier system ensures that the package can handle complex data processing requirements while maintaining user control over critical decisions and providing sensible defaults for common configurations.
 
 ## Installation & Setup
 

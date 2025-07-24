@@ -16,7 +16,8 @@
 
 1. **Download this project** (green "Code" button -> "Download ZIP")
 2. **Extract the ZIP file** to your computer
-3. **Double-click the launcher** for your operating system:
+3. Copy `Ordered UC Berkeley W1_W2_W3 COMMON FILE.sav` into the `data/` folder
+4. **Double-click the launcher** for your operating system:
    - **Windows**: Double-click `no_code/run_examples.bat`
    - **Mac/Linux**: Double-click `no_code/run_examples.sh`
 
@@ -61,12 +62,21 @@ Just change the values in quotes and run the launcher again.
 
 ### Installation
 
-```bash
-# Clone and install
-git clone https://github.com/michaelnapoli404/wave-visualizer.git
-cd wave-visualizer
-pip install -e ".[image-export]"
-```
+1. **Clone or download** this repository
+2. **Place your data file**: Copy `Ordered UC Berkeley W1_W2_W3 COMMON FILE.sav` into the `data/` folder
+3. **Install conda** (if not already installed): [Download Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+4. **Create the environment**:
+   ```bash
+   conda env create -f environment.yml
+   ```
+5. **Activate the environment**:
+   ```bash
+   conda activate goldman_env
+   ```
+6. **Install the package**:
+   ```bash
+   pip install -e .
+   ```
 
 ### Basic Usage
 
