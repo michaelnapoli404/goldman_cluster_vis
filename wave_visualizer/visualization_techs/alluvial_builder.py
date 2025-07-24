@@ -241,7 +241,7 @@ class AlluvialVisualizationBuilder(VisualizationBuilder):
         source_wave = self._source_wave_prefix.rstrip('_')
         target_wave = self._target_wave_prefix.rstrip('_')
         
-        main_title = f"{source_wave} → {target_wave} Transitions"
+        main_title = f"{source_wave} -> {target_wave} Transitions"
         
         # Add subtitle for filtering
         if self._filter_column and self._filter_value:

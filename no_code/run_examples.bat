@@ -1,4 +1,14 @@
 @echo off
+echo ====================================================
+echo          WAVE VISUALIZER - NO CODE LAUNCHER
+echo ====================================================
+echo.
+echo This script will automatically:
+echo   1. Install conda (if needed)
+echo   2. Set up the environment
+echo   3. Generate 9 political visualizations
+echo   4. Save results as HTML + PNG files
+echo.
 echo Starting Wave Visualizer Examples...
 echo.
 
@@ -29,55 +39,102 @@ if exist "%USERPROFILE%\miniconda3\Scripts\conda.exe" (
     goto :conda_found
 )
 
-:: Method 4: Check system-wide Anaconda
+:: Method 4: Check for Anaconda in ProgramData
 if exist "C:\ProgramData\Anaconda3\Scripts\conda.exe" (
-    echo Found system-wide Anaconda!
+    echo Found Anaconda in ProgramData!
     set "CONDA_EXE=C:\ProgramData\Anaconda3\Scripts\conda.exe"
     set "PATH=C:\ProgramData\Anaconda3\Scripts;%PATH%"
     goto :conda_found
 )
 
-:: Method 5: Check system-wide Miniconda
+:: Method 5: Check for Miniconda in ProgramData
 if exist "C:\ProgramData\Miniconda3\Scripts\conda.exe" (
-    echo Found system-wide Miniconda!
+    echo Found Miniconda in ProgramData!
     set "CONDA_EXE=C:\ProgramData\Miniconda3\Scripts\conda.exe"
     set "PATH=C:\ProgramData\Miniconda3\Scripts;%PATH%"
     goto :conda_found
 )
 
-:: All methods failed - conda not found
+:: If conda not found, offer automatic installation
 echo.
 echo ========================================================
-echo ERROR: Conda not found on your system!
+echo CONDA NOT FOUND - AUTOMATIC INSTALLATION AVAILABLE
 echo ========================================================
 echo.
-echo We searched these locations:
-echo 1. System PATH
-echo 2. %USERPROFILE%\anaconda3\Scripts\
-echo 3. %USERPROFILE%\miniconda3\Scripts\
-echo 4. C:\ProgramData\Anaconda3\Scripts\
-echo 5. C:\ProgramData\Miniconda3\Scripts\
+echo We can automatically install Miniconda for you!
+echo This is safe and will not affect existing Python installations.
 echo.
-echo SOLUTION: Install conda first, then try again
+echo OPTION 1: Automatic Installation (Recommended)
+echo   - We'll download and install Miniconda3
+echo   - Takes 2-3 minutes
+echo   - Completely automatic
 echo.
-echo OPTION 1 - Anaconda (Recommended for beginners):
-echo   Download: https://www.anaconda.com/products/distribution
-echo   - Choose "Add Anaconda to PATH" during installation
-echo   - Or use default location and we'll find it automatically
+echo OPTION 2: Manual Installation
+echo   - Download from: https://docs.conda.io/en/latest/miniconda.html
+echo   - Follow installation wizard
+echo   - Then run this script again
 echo.
-echo OPTION 2 - Miniconda (Minimal installation):
-echo   Download: https://docs.conda.io/en/latest/miniconda.html
-echo   - Choose "Add to PATH" during installation
-echo.
-echo After installation:
-echo   1. Restart this command prompt
-echo   2. Run this script again
-echo.
-echo Current PATH: %PATH%
+set /p "INSTALL_CHOICE=Would you like us to install conda automatically? (y/n): "
+
+if /i "%INSTALL_CHOICE%"=="y" goto :auto_install_conda
+if /i "%INSTALL_CHOICE%"=="yes" goto :auto_install_conda
+
+echo Manual installation selected.
+echo Please download conda from: https://docs.conda.io/en/latest/miniconda.html
+echo After installation, run this script again.
 echo.
 echo Press any key to exit...
 pause >nul
 exit /b 1
+
+:auto_install_conda
+echo.
+echo [AUTO-INSTALL] Downloading and installing Miniconda3...
+echo This may take a few minutes - please wait...
+echo.
+
+:: Create temp directory
+set "TEMP_DIR=%TEMP%\wave_visualizer_setup"
+if not exist "%TEMP_DIR%" mkdir "%TEMP_DIR%"
+
+:: Download Miniconda installer
+echo Downloading Miniconda3 installer...
+powershell -Command "& {[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri 'https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe' -OutFile '%TEMP_DIR%\miniconda_installer.exe'}"
+
+if not exist "%TEMP_DIR%\miniconda_installer.exe" (
+    echo ERROR: Failed to download Miniconda installer.
+    echo Please install manually from: https://docs.conda.io/en/latest/miniconda.html
+    echo.
+    echo Press any key to exit...
+    pause >nul
+    exit /b 1
+)
+
+echo Download complete! Installing Miniconda3...
+echo.
+
+:: Install Miniconda silently
+"%TEMP_DIR%\miniconda_installer.exe" /InstallationType=JustMe /RegisterPython=0 /S /D=%USERPROFILE%\miniconda3
+
+:: Check if installation was successful
+if exist "%USERPROFILE%\miniconda3\Scripts\conda.exe" (
+    echo SUCCESS: Miniconda3 installed successfully!
+    set "CONDA_EXE=%USERPROFILE%\miniconda3\Scripts\conda.exe"
+    set "PATH=%USERPROFILE%\miniconda3\Scripts;%PATH%"
+    
+    :: Clean up installer
+    del "%TEMP_DIR%\miniconda_installer.exe" >nul 2>&1
+    rmdir "%TEMP_DIR%" >nul 2>&1
+    
+    goto :conda_found
+) else (
+    echo ERROR: Installation may have failed.
+    echo Please try manual installation from: https://docs.conda.io/en/latest/miniconda.html
+    echo.
+    echo Press any key to exit...
+    pause >nul
+    exit /b 1
+)
 
 :conda_found
 echo SUCCESS: Conda found and configured!

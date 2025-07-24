@@ -73,7 +73,7 @@ def create_pattern_analysis_visualization(data: pd.DataFrame = None,
     for _, row in transition_data.iterrows():
         source_name = row[source_column]
         target_name = row[target_column]
-        pattern = f"{source_name} → {target_name}"
+        pattern = f"{source_name} -> {target_name}"
         patterns.append(pattern)
     
     # Count patterns and create summary
@@ -86,7 +86,7 @@ def create_pattern_analysis_visualization(data: pd.DataFrame = None,
     
     # Add pattern type classification (stable vs changed)
     pattern_df['Type'] = pattern_df['Pattern'].apply(
-        lambda x: 'Stable' if x.split(' → ')[0] == x.split(' → ')[1] else 'Changed'
+        lambda x: 'Stable' if x.split(' -> ')[0] == x.split(' -> ')[1] else 'Changed'
     )
     
     # Get top 15 patterns for visualization
