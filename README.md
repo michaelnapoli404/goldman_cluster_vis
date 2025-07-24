@@ -7,7 +7,6 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Type Checked: mypy](https://img.shields.io/badge/type--checked-mypy-blue)](https://mypy-lang.org/)
 
-Wave Visualizer is a professional Python package designed for analyzing longitudinal survey data, particularly for political science research with multiple survey waves.
 
 ## No-Code Usage
 
