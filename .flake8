@@ -1,0 +1,53 @@
+[flake8]
+max-line-length = 88
+extend-ignore = 
+    # Black compatibility
+    E203,  # whitespace before ':'
+    E501,  # line too long (handled by black)
+    W503,  # line break before binary operator
+    
+    # Allow some flexibility for data science code
+    E402,  # module level import not at top of file (sometimes needed for conditional imports)
+    
+exclude = 
+    .git,
+    __pycache__,
+    .venv,
+    venv,
+    env,
+    .env,
+    build,
+    dist,
+    *.egg-info,
+    .pytest_cache,
+    .mypy_cache,
+    .coverage,
+    htmlcov,
+    .tox,
+    docs/
+
+per-file-ignores =
+    # Tests can have longer lines and more complex imports
+    tests/*:E501,F401,F811
+    
+    # Init files can have many imports
+    __init__.py:F401,F403
+    
+    # Configuration files
+    conftest.py:F401,F811
+    
+    # Notebooks and examples
+    *.ipynb:E501,E402
+    examples/*:E402
+
+# Complexity settings
+max-complexity = 12
+max-cognitive-complexity = 12
+
+# Docstring settings
+docstring-convention = google
+require-return-annotation = true
+
+# Import settings
+import-order-style = google
+application-import-names = wave_visualizer 

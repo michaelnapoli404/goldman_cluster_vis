@@ -1,0 +1,113 @@
+repos:
+  # Code formatting
+  - repo: https://github.com/psf/black
+    rev: 23.12.1
+    hooks:
+      - id: black
+        language_version: python3
+        args: [--line-length=88]
+        exclude: ^(docs/|build/|dist/)
+
+  # Import sorting
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: [--profile=black, --line-length=88]
+        exclude: ^(docs/|build/|dist/)
+
+  # Linting
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8
+        additional_dependencies:
+          - flake8-docstrings
+          - flake8-import-order
+          - flake8-cognitive-complexity
+        exclude: ^(docs/|build/|dist/|tests/)
+
+  # Type checking
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.8.0
+    hooks:
+      - id: mypy
+        additional_dependencies: [types-all]
+        exclude: ^(tests/|docs/|build/|dist/|examples/)
+        args: [--ignore-missing-imports]
+
+  # Security scanning
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.6
+    hooks:
+      - id: bandit
+        args: [-r, wave_visualizer/]
+        exclude: ^tests/
+
+  # General file checks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      # File formatting
+      - id: trailing-whitespace
+        exclude: ^(\.md|\.txt)$
+      - id: end-of-file-fixer
+        exclude: ^(\.md|\.txt)$
+      - id: check-yaml
+        exclude: ^(docs/|build/|dist/)
+      - id: check-json
+        exclude: ^(docs/|build/|dist/)
+      - id: check-toml
+        exclude: ^(docs/|build/|dist/)
+      
+      # Code quality
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      - id: check-ast
+        exclude: ^(docs/|build/|dist/)
+      - id: check-merge-conflict
+      - id: debug-statements
+        exclude: ^(tests/|docs/)
+      
+      # Python specific
+      - id: check-docstring-first
+        exclude: ^(tests/|docs/|examples/)
+      - id: requirements-txt-fixer
+        files: requirements.*\.txt$
+
+  # Jupyter notebook cleaning
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.7.1
+    hooks:
+      - id: nbqa-black
+        args: [--line-length=88]
+      - id: nbqa-isort
+        args: [--profile=black]
+
+  # Documentation
+  - repo: https://github.com/pycqa/pydocstyle
+    rev: 6.3.0
+    hooks:
+      - id: pydocstyle
+        exclude: ^(tests/|docs/|build/|dist/|examples/)
+        args:
+          - --convention=google
+          - --add-ignore=D100,D101,D102,D103,D104,D105,D107
+
+# Global settings
+default_stages: [commit, push]
+fail_fast: false
+minimum_pre_commit_version: "3.0.0"
+
+# CI settings
+ci:
+  autofix_commit_msg: |
+    [pre-commit.ci] auto fixes from pre-commit hooks
+
+    for more information, see https://pre-commit.ci
+  autofix_prs: true
+  autoupdate_branch: ''
+  autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
+  autoupdate_schedule: weekly
+  skip: [mypy]  # Skip mypy in CI due to dependency complexity
+  submodules: false 

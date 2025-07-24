@@ -1,0 +1,23 @@
+# Include documentation and metadata files
+include README.md
+include LICENSE
+include CHANGELOG.md
+include pyproject.toml
+include requirements.txt
+
+# Include package configuration and data files
+recursive-include wave_visualizer/settings *.csv *.json
+recursive-include wave_visualizer/utils *.py
+recursive-include wave_visualizer *.py
+
+# Exclude development and build files
+exclude .gitignore
+exclude .pre-commit-config.yaml
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * .DS_Store
+recursive-exclude tests *
+recursive-exclude docs *
+recursive-exclude example_visualizations *
+exclude test_*.py
+exclude *_test.py 
