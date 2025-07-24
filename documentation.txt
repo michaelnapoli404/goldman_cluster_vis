@@ -39,7 +39,7 @@ Wave Visualizer is a professional-grade Python package designed for analyzing lo
 
 ## Installation & Setup
 
-### Method 1: No-Code Installation (Recommended for Non-Programmers)
+### Method 1: No-Code Installation
 
 1. Download the project ZIP file from GitHub
 2. Extract to your computer

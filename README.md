@@ -9,7 +9,7 @@
 
 Wave Visualizer is a professional Python package designed for analyzing longitudinal survey data, particularly for political science research with multiple survey waves.
 
-## No-Code Usage (Recommended for Non-Programmers)
+## No-Code Usage
 
 **Want to create visualizations without coding?** Use our simple launcher scripts!
 
@@ -54,7 +54,7 @@ wave_visualizer.create_alluvial_visualization(
 )
 ```
 
-**No programming experience needed!** Just change the values in quotes and run the launcher again.
+Just change the values in quotes and run the launcher again.
 
 ---
 
@@ -113,15 +113,6 @@ wave_visualizer.create_alluvial_visualization(
 ```
 
 ## Example Output
-
-The package generates interactive visualizations showing how survey responses transition between waves:
-
-```
-Wave 1 -> Wave 3 Transitions (Republican Subset)
-├── Stable patterns: 65%
-├── Changed responses: 30% 
-└── Missing data: 5%
-```
 
 See `example_visualizations/political_w1_w3.py` for a complete working example generating 9 visualizations.
 
