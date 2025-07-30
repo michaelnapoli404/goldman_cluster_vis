@@ -1,712 +1,1018 @@
-# Wave Visualizer - Technical Documentation
+# Wave Visualizer - Complete Technical Documentation
 
-> Comprehensive Python package for longitudinal survey data visualization and analysis
+> Professional Python package for longitudinal survey data visualization and analysis
 
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [Settings System Architecture](#settings-system-architecture)
-3. [Installation & Setup](#installation--setup)
-4. [No-Code Usage](#no-code-usage)
-5. [API Reference](#api-reference)
-6. [Visualization Types](#visualization-types)
-7. [Configuration System](#configuration-system)
-8. [Data Processing Pipeline](#data-processing-pipeline)
-9. [Export System](#export-system)
-10. [Development Guide](#development-guide)
-11. [Architecture Details](#architecture-details)
+1. [Project Overview](#project-overview)
+2. [Complete File Structure and Interactions](#complete-file-structure-and-interactions)
+3. [Settings Files Configuration Guide](#settings-files-configuration-guide)
+4. [Integrating New Waves](#integrating-new-waves)
+5. [Development Workflow](#development-workflow)
+6. [User Interaction Patterns](#user-interaction-patterns)
+7. [Dependencies and Environment](#dependencies-and-environment)
 
-## Overview
+## Project Overview
 
-Wave Visualizer is a professional-grade Python package designed for analyzing longitudinal survey data, particularly in political science research. It provides sophisticated visualization tools for tracking how respondents' answers change across multiple survey waves.
+Wave Visualizer is a comprehensive Python package designed for analyzing longitudinal survey data across multiple time periods (waves). It provides sophisticated visualization tools for tracking how respondents' answers change between survey waves, with particular focus on political science and social research applications.
 
-### Key Features
+### Core Capabilities
 
-- **Three Visualization Types**: Alluvial plots, heatmaps, and pattern analysis
-- **Automatic Wave Detection**: Support for unlimited survey waves (W1, W2, W3, etc.)
-- **No-Code Solution**: Complete launcher scripts with automatic conda installation
-- **Professional Export**: HTML + high-resolution image export
-- **Semantic Color Mapping**: Consistent, meaningful color assignments
-- **Comprehensive Data Pipeline**: Automated cleaning and preprocessing
-- **Type-Safe APIs**: Full type hints and IDE support
+- **Three Visualization Types**: Alluvial plots (Sankey diagrams), heatmaps, and pattern analysis charts
+- **Dynamic Wave Support**: Unlimited survey waves through configurable CSV definitions
+- **Professional Data Pipeline**: Complete SPSS data cleaning with interactive guidance
+- **Semantic Color Mapping**: Consistent variable color assignments across visualizations
+- **Multi-Format Export**: HTML, PNG, SVG, and PDF export with automatic path detection
+- **No-Code Solution**: Automated environment setup and example generation
 
-### Recent Major Updates
+## Complete File Structure and Interactions
 
-- **Fixed Alluvial Structure**: Separate nodes for each wave instead of shared categories
-- **Enhanced Heatmaps**: Percentage-based matrices with red colorscale matching user preferences
-- **Improved Pattern Analysis**: Horizontal bar charts with green/orange color coding for stable/changed patterns
-- **Automatic Installation**: No-code launchers now automatically install conda if needed
-- **Simplified Export Paths**: Automatic detection of example_visualizations directory
+### Root Directory Files
 
-## Settings System Architecture
+#### Core Project Files
 
-The Wave Visualizer package uses a settings system with three distinct categories of CSV configuration files. Understanding these categories is essential for proper customization and maintenance.
+**`pyproject.toml`** (Project Configuration)
+- **Purpose**: Defines project metadata, dependencies, and build configuration
+- **Dependencies**: Specifies core packages (pandas, plotly, numpy, pyreadstat)
+- **Optional Dependencies**: Image export (kaleido), development tools (black, mypy, pytest)
+- **Build System**: Uses setuptools with wheel for package distribution
+- **Interacts With**: pip/conda for installation, development tools for code quality
 
-### Three Categories of Settings Files
+**`environment.yml`** (Conda Environment)
+- **Purpose**: Defines conda environment 'goldman_env' with all necessary packages
+- **Contains**: Python 3.11, core scientific packages, and pip dependencies
+- **Usage**: `conda env create -f environment.yml`
+- **Interacts With**: No-code launchers for automatic environment setup
 
-#### 1. AUTO-GENERATED (No User Input Required)
+**`setup.py`** (Legacy Setup)
+- **Purpose**: Minimal setup script redirecting to pyproject.toml
+- **Content**: Simple setuptools configuration for compatibility
+- **Interacts With**: Build systems that don't support pyproject.toml
 
-These files are automatically created by Python from your data. They require no manual editing and are regenerated whenever you run the data cleaning pipeline.
+#### Development and Quality Control
+
+**`Makefile`** (Development Workflow)
+- **Purpose**: Automates development tasks and quality checks
+- **Targets**: install, format (black/isort), lint (flake8), type-check (mypy), test (pytest)
+- **Integration**: Works with pre-commit hooks and CI/CD pipelines
+- **Usage**: `make setup-dev`, `make all-checks`, `make test-cov`
+
+**`.pre-commit-config.yaml`** (Code Quality Automation)
+- **Purpose**: Enforces code quality standards on every commit
+- **Hooks**: black formatting, isort imports, flake8 linting, mypy type checking
+- **Configuration**: Runs on staged files before commit
+- **Interacts With**: Git hooks, development workflow
+
+**`.flake8`** (Linting Configuration)
+- **Purpose**: Configures Python code style and quality checks
+- **Rules**: Line length, import order, complexity limits, docstring requirements
+- **Excludes**: Test files, build directories, migrations
+
+**`mypy.ini`** (Type Checking Configuration)
+- **Purpose**: Configures static type checking for the codebase
+- **Settings**: Strict type checking, untyped definition detection
+- **Coverage**: Ensures all public APIs have proper type annotations
+
+**`MANIFEST.in`** (Package Distribution)
+- **Purpose**: Specifies which files to include in source distribution
+- **Includes**: Settings CSV files, documentation, example scripts
+- **Excludes**: Test files, development tools, build artifacts
+
+#### Documentation and Information
+
+**`README.md`** (Project Introduction)
+- **Purpose**: Primary project description and quick start guide
+- **Content**: Installation instructions, usage examples, feature overview
+- **Audience**: GitHub visitors, new users, package discovery
+
+**`CHANGELOG.md`** (Version History)
+- **Purpose**: Documents all changes, additions, and fixes by version
+- **Format**: Follows Keep a Changelog standard
+- **Content**: Features, bug fixes, breaking changes, migration notes
+
+**`.gitignore`** (Version Control)
+- **Purpose**: Excludes files from Git tracking
+- **Excludes**: Python cache files, build artifacts, IDE files, data files, environment files
+
+### Main Package Directory (`wave_visualizer/`)
+
+#### Core Package Interface
+
+**`wave_visualizer/__init__.py`** (Package Entry Point)
+- **Purpose**: Main package interface exposing all public APIs
+- **Exports**: Visualization functions, data cleaning classes, utility functions
+- **Functions**: 
+  - `create_alluvial_visualization()` - Main alluvial plot creation
+  - `create_heatmap_visualization()` - Transition matrix heatmaps
+  - `create_pattern_analysis_visualization()` - Pattern frequency charts
+  - `add_wave_definition()` - Add new survey waves
+  - `add_color_mapping()` - Customize variable colors
+  - `export_figure()` - Multi-format export utility
+- **Interacts With**: All package modules, user scripts, example files
+
+#### Core System Components
+
+**`wave_visualizer/config.py`** (System Configuration)
+- **Purpose**: Centralized configuration management for the entire package
+- **Contains**: Default plot parameters, file paths, system settings
+- **Configures**: Figure dimensions, color schemes, export settings, logging levels
+- **Interacts With**: All visualization modules, export system, settings loaders
+
+**`wave_visualizer/exceptions.py`** (Error Handling)
+- **Purpose**: Custom exception hierarchy for specific error types
+- **Exceptions**: 
+  - `WaveVisualizerError` - Base exception class
+  - `DataProcessingError` - Data cleaning and processing issues
+  - `VisualizationError` - Plot generation problems
+  - `ValidationError` - Input validation failures
+  - `ConfigurationError` - Settings and configuration problems
+- **Interacts With**: All modules for consistent error reporting
+
+**`wave_visualizer/validators.py`** (Input Validation)
+- **Purpose**: Comprehensive input validation for all package functions
+- **Validates**: 
+  - Data formats and structures
+  - Wave configuration syntax
+  - Column name formats
+  - File path existence
+  - Parameter value ranges
+- **Returns**: Detailed validation results with error messages
+- **Interacts With**: All public APIs, data processing pipeline
+
+**`wave_visualizer/interfaces.py`** (Abstract Base Classes)
+- **Purpose**: Defines protocols and interfaces for extensibility
+- **Protocols**: 
+  - `DataProvider` - Data source interface
+  - `ColorProvider` - Color mapping interface
+  - `WaveConfigProvider` - Wave configuration interface
+  - `ValidationProvider` - Validation interface
+- **Benefits**: Type safety, plugin architecture, testing frameworks
+- **Interacts With**: Concrete implementations, type checker
+
+### Data Preparation Module (`wave_visualizer/data_prep/`)
+
+#### Core Data Processing
+
+**`wave_visualizer/data_prep/__init__.py`** (Cleaning Module Interface)
+- **Purpose**: Exposes data preparation classes and utilities
+- **Exports**: Data cleaning pipeline, export handler, customization tools
+- **Interacts With**: Main package, user scripts
+
+**`wave_visualizer/data_prep/export_handler.py`** (Export System)
+- **Purpose**: Manages multi-format figure export with intelligent path detection
+- **Functions**:
+  - `export_figure()` - Main export function
+  - `create_exports_folder()` - Automatic directory creation
+  - `_detect_calling_context()` - Smart path detection based on call stack
+- **Formats**: HTML (interactive), PNG (high-res), SVG (vector), PDF (print)
+- **Intelligence**: Detects if called from example_visualizations/ and adjusts paths
+- **Interacts With**: Plotly figures, file system, all visualization modules
+
+**`wave_visualizer/data_prep/customization.py`** (Visualization Customization)
+- **Purpose**: Manages plot styling, themes, and visual parameters
+- **Class**: `VisualizationCustomizer` - Central styling controller
+- **Capabilities**: 
+  - Theme management (light/dark modes)
+  - Font family and size customization
+  - Color palette selection
+  - Layout parameter adjustment
+- **Interacts With**: All visualization modules, configuration system
+
+**`wave_visualizer/data_prep/color_mapping.py`** (Color Management)
+- **Purpose**: Semantic color assignment and management system
+- **Class**: `ColorMappingHandler` - Color mapping operations
+- **Functions**:
+  - Load color mappings from CSV
+  - Generate fallback colors for unmapped values
+  - Validate color format (hex codes)
+  - Manage persistent color assignments
+- **Interacts With**: Settings CSV files, visualization modules, customization system
+
+**`wave_visualizer/data_prep/wave_parser.py`** (Wave Configuration)
+- **Purpose**: Parses wave configuration strings and manages wave definitions
+- **Class**: `WaveConfigParser` - Wave configuration processing
+- **Functions**:
+  - Parse wave config strings (`w1_to_w3`, `w2_to_w4`)
+  - Load wave definitions from CSV
+  - Generate column name pairs for transitions
+  - Validate wave combinations
+- **Pattern**: Regex matching for wave configurations
+- **Interacts With**: Wave definitions CSV, all visualization functions
+
+### Data Cleaning Module (`wave_visualizer/data_prep/cleaning/`)
+
+#### Data Cleaning Pipeline
+
+**`wave_visualizer/data_prep/cleaning/__init__.py`** (Cleaning Module Interface)
+- **Purpose**: Exposes all data cleaning classes
+- **Exports**: Pipeline, individual handlers, metadata tools
+
+**`wave_visualizer/data_prep/cleaning/cleaning.py`** (Main Pipeline)
+- **Purpose**: Orchestrates the complete data cleaning workflow
+- **Class**: `DataCleaningPipeline` - Main pipeline controller
+- **Workflow**:
+  1. Load SPSS data with metadata extraction
+  2. Convert value codes to descriptive labels
+  3. Handle missing values (interactive or automated)
+  4. Merge similar categories (interactive guidance)
+  5. Reduce dataset size (filter rows/columns)
+  6. Save processed data and settings
+- **Modes**: Interactive (user guidance) or automated (using saved settings)
+- **Interacts With**: All cleaning handlers, settings files, raw data
+
+**`wave_visualizer/data_prep/cleaning/metadata_handler.py`** (SPSS Metadata)
+- **Purpose**: Extracts and manages SPSS file metadata
+- **Class**: `MetadataHandler` - SPSS metadata operations
+- **Functions**:
+  - Extract variable labels from SPSS files
+  - Extract value labels (code-to-text mappings)
+  - Generate metadata CSV files for future use
+  - Handle character encoding issues
+- **Output**: Creates `variable_labels.csv` and `value_labels.csv`
+- **Interacts With**: Raw SPSS files, pyreadstat library, settings directory
+
+**`wave_visualizer/data_prep/cleaning/values_to_labels.py`** (Label Conversion)
+- **Purpose**: Converts numeric codes to descriptive text labels
+- **Class**: `ValuesToLabelsConverter` - Label transformation
+- **Process**:
+  - Uses value_labels.csv for code-to-text mapping
+  - Creates new "_labeled" columns with descriptive text
+  - Preserves original numeric columns
+  - Handles missing mappings gracefully
+- **Interacts With**: Metadata CSV files, data cleaning pipeline
+
+**`wave_visualizer/data_prep/cleaning/value_missing_and_dropping_handler.py`** (Missing Values)
+- **Purpose**: Handles missing, invalid, and unwanted values in data
+- **Class**: `ValueMissingAndDroppingHandler` - Missing value operations
+- **Strategies**:
+  - `mark_unknown`: Replace with specified label (preserves cases)
+  - `drop_rows`: Remove rows with missing values (reduces dataset size)
+  - `impute_mode`: Replace with most common value
+  - `impute_mean`: Replace with average value (numeric only)
+  - `impute_median`: Replace with middle value (numeric only)
+  - `impute_custom`: Replace with user-specified value
+- **Interactive**: Prompts user for decisions on each problematic value
+- **Persistence**: Saves decisions to `missing_value_settings.csv`
+- **Interacts With**: Cleaning pipeline, settings files, user interface
+
+**`wave_visualizer/data_prep/cleaning/value_merging_handler.py`** (Category Merging)
+- **Purpose**: Merges similar categorical values for cleaner analysis
+- **Class**: `ValueMergingHandler` - Category consolidation
+- **Use Cases**:
+  - Combine "Strong Democrat" + "Weak Democrat" → "Democrat"
+  - Merge "Other" and ambiguous responses
+  - Standardize category names across waves
+- **Interactive**: Shows value frequencies and guides merging decisions
+- **Persistence**: Saves decisions to `value_merging_settings.csv`
+- **Interacts With**: Cleaning pipeline, settings files, user interface
+
+**`wave_visualizer/data_prep/cleaning/row_reduction.py`** (Dataset Filtering)
+- **Purpose**: Reduces dataset size through row and column filtering
+- **Class**: `RowReductionHandler` - Data filtering operations
+- **Capabilities**:
+  - Filter by specific column values
+  - Remove columns with excessive missing data
+  - Sample random subsets for testing
+  - Remove duplicate records
+- **Configuration**: Supports complex filtering rules
+- **Interacts With**: Cleaning pipeline, filtered data output
+
+### Visualization Module (`wave_visualizer/visualization_techs/`)
+
+#### Visualization Generation
+
+**`wave_visualizer/visualization_techs/__init__.py`** (Visualization Interface)
+- **Purpose**: Exposes all visualization creation functions
+- **Exports**: Main visualization functions, builder class
+
+**`wave_visualizer/visualization_techs/alluvial_plots.py`** (Alluvial Visualizations)
+- **Purpose**: Creates alluvial (Sankey) diagrams for transition flow visualization
+- **Function**: `create_alluvial_visualization()` - Main creation function
+- **Features**:
+  - Separate nodes for each wave (e.g., "Flourishing (W1)" vs "Flourishing (W3)")
+  - Flow thickness represents respondent count
+  - Color coding by source category
+  - Interactive hover information
+- **Returns**: Plotly figure and statistics dictionary
+- **Interacts With**: Alluvial builder, data processing, export system
+
+**`wave_visualizer/visualization_techs/alluvial_builder.py`** (Alluvial Construction)
+- **Purpose**: Implements builder pattern for complex alluvial plot construction
+- **Class**: `AlluvialVisualizationBuilder` - Detailed plot construction
+- **Builder Pattern**:
+  - Set data source
+  - Configure wave transitions
+  - Apply filters
+  - Set styling options
+  - Build final visualization
+- **Advantages**: Flexible construction, parameter validation, reusability
+- **Interacts With**: Alluvial plots module, color mapping, wave parser
+
+**`wave_visualizer/visualization_techs/heatmaps.py`** (Heatmap Visualizations)
+- **Purpose**: Creates transition probability heatmaps
+- **Function**: `create_heatmap_visualization()` - Main creation function
+- **Features**:
+  - Percentage-based transition matrices
+  - Red color scale for intensity representation
+  - Row-wise normalization (percentages sum to 100%)
+  - Diagonal elements show stability
+- **Layout**: 600x800 dimensions for consistency
+- **Interacts With**: Data processing, color mapping, export system
+
+**`wave_visualizer/visualization_techs/transition_pattern_analysis.py`** (Pattern Analysis)
+- **Purpose**: Creates ranked transition pattern visualizations
+- **Function**: `create_pattern_analysis_visualization()` - Main creation function
+- **Features**:
+  - Horizontal bar charts showing most common transitions
+  - Green bars for stable patterns (same category)
+  - Orange bars for change patterns (different categories)
+  - Top 15 most frequent patterns
+  - Count and percentage labels
+- **Sorting**: Patterns ranked by frequency
+- **Interacts With**: Data processing, export system
+
+### Utilities Module (`wave_visualizer/utils/`)
+
+**`wave_visualizer/utils/__init__.py`** (Utils Interface)
+- **Purpose**: Exposes utility functions
+- **Exports**: Logger configuration
+
+**`wave_visualizer/utils/logger.py`** (Logging System)
+- **Purpose**: Centralized logging configuration for the entire package
+- **Functions**:
+  - `configure_package_logging()` - Setup package-wide logging
+  - `get_logger()` - Get logger instance for modules
+- **Features**:
+  - Configurable log levels (DEBUG, INFO, WARNING, ERROR)
+  - Console and file output options
+  - Structured log formatting
+  - Performance tracking
+- **Interacts With**: All package modules, configuration system
+
+### Settings Directory (`wave_visualizer/settings/`)
+
+**`wave_visualizer/settings/__init__.py`** (Settings Interface)
+- **Purpose**: Defines settings directory paths and loading functions
+- **Constants**: Directory paths for different setting types
+- **Functions**: Settings file discovery and validation
+- **Interacts With**: All modules that read configuration files
+
+**`wave_visualizer/settings/processed_data.csv`** (Processed Dataset)
+- **Purpose**: Stores the cleaned and processed dataset ready for visualization
+- **Source**: Output of data cleaning pipeline
+- **Format**: CSV with descriptive column names and clean categorical values
+- **Usage**: Input for all visualization functions
+- **Size**: Varies based on original data and cleaning decisions
+
+### Example Scripts (`example_visualizations/`)
+
+**`example_visualizations/political_w1_w3.py`** (Complete Example)
+- **Purpose**: Demonstrates full visualization workflow for political party analysis
+- **Generates**: 9 visualizations (3 parties × 3 visualization types)
+- **Structure**:
+  - Democratic voters analysis (alluvial, heatmap, patterns)
+  - Republican voters analysis (alluvial, heatmap, patterns)
+  - Independent voters analysis (alluvial, heatmap, patterns)
+- **Customizable**: Easy parameter modification for different analyses
+- **Interacts With**: Main package API, export system
+
+**`example_visualizations/simple_demo.py`** (Quick Demo)
+- **Purpose**: Minimal example showing basic package usage
+- **Content**: Single visualization creation and export
+- **Usage**: Quick verification that package works correctly
+
+**`example_visualizations/exports/`** (Output Directory)
+- **Purpose**: Stores generated visualization files
+- **Contents**: HTML and PNG files for each visualization
+- **Organization**: Named by party, visualization type, and wave configuration
+
+### No-Code Solution (`no_code/`)
+
+**`no_code/run_examples.sh`** (Linux/Mac Launcher)
+- **Purpose**: Automated setup and execution for Unix systems
+- **Process**:
+  1. Detects or installs conda/miniconda
+  2. Creates goldman_env environment
+  3. Installs package dependencies
+  4. Runs example visualization scripts
+  5. Reports output locations
+- **Intelligence**: Searches multiple conda installation paths
+- **Error Handling**: Provides clear error messages and solutions
+
+**`no_code/run_examples.bat`** (Windows Launcher)
+- **Purpose**: Automated setup and execution for Windows systems
+- **Process**: Identical to shell script but using Windows batch syntax
+- **Conda Detection**: Searches Windows-specific conda installation paths
+- **User Interface**: Windows-style pause commands and error handling
+
+### Test Suite (`tests/`)
+
+**`tests/__init__.py`** (Test Package)
+- **Purpose**: Makes tests directory a Python package
+- **Content**: Test utilities and shared imports
+
+**`tests/conftest.py`** (Test Configuration)
+- **Purpose**: Pytest configuration and shared fixtures
+- **Fixtures**: Mock data, temporary directories, test settings
+- **Scope**: Session, module, and function-level fixtures
+- **Utilities**: Test data generators, assertion helpers
+
+**`tests/test_validators.py`** (Validation Tests)
+- **Purpose**: Tests for input validation system
+- **Coverage**: Parameter validation, error handling, edge cases
+- **Scenarios**: Valid inputs, invalid inputs, boundary conditions
+
+**`tests/test_alluvial_builder.py`** (Builder Pattern Tests)
+- **Purpose**: Tests for alluvial visualization builder
+- **Coverage**: Builder pattern implementation, method chaining, validation
+- **Scenarios**: Complete builds, partial builds, error conditions
+
+**`tests/test_integration.py`** (Integration Tests)
+- **Purpose**: End-to-end workflow testing
+- **Coverage**: Complete pipeline from data to visualization
+- **Scenarios**: Different wave configurations, export formats, filtering options
+
+## Settings Files Configuration Guide
+
+### Three-Tier Settings Architecture
+
+The Wave Visualizer uses a sophisticated three-tier settings system designed for different levels of user control and automation.
+
+#### Tier 1: AUTO-GENERATED FILES (No User Action Required)
 
 **Location**: `wave_visualizer/settings/metadata_output/`
 
-**a) variable_labels.csv**
-- **Created by**: `metadata_handler.py` during data cleaning
-- **Purpose**: Maps SPSS variable names to their descriptive labels
-- **Structure**:
+These files are automatically created during data processing and should never be manually edited.
+
+**`variable_labels.csv`** (Variable Descriptions)
+- **Creator**: `metadata_handler.py` during SPSS data loading
+- **Purpose**: Maps SPSS variable names to human-readable descriptions
+- **Format**:
   ```csv
   variable_name,variable_label
-  Respid,
+  Respid,Respondent ID
   ppcmdate,Date member completed survey
   WAVE,Wave of Respondent
   HFClust_labeled,Health & Finance Cluster Labels
+  PID1_labeled,Political Party Identification
   ```
-- **Contains**: Variable name and its human-readable description
-- **Updated**: Automatically every time you run the data cleaning pipeline
-- **User Action**: None required - do not edit manually
+- **Regeneration**: Automatically updated every time you process new SPSS data
+- **User Action**: None required - system maintains this automatically
 
-**b) value_labels.csv**
-- **Created by**: `metadata_handler.py` during data cleaning
-- **Purpose**: Maps numeric codes to their descriptive text labels for categorical variables
-- **Structure**:
+**`value_labels.csv`** (Value Code Mappings)
+- **Creator**: `metadata_handler.py` during SPSS data loading
+- **Purpose**: Maps numeric codes to descriptive text labels
+- **Format**:
   ```csv
   variable_name,value,value_label
   WAVE,1.0,Wave 1 only
   WAVE,2.0,Wave 2 only
-  HUMFL1,0.0,0 - Extremely negative (Unhappy)
-  HUMFL1,5.0,5 - Neither
   PID1_labeled,1.0,Republican
   PID1_labeled,2.0,Democrat
+  PID1_labeled,3.0,Independent
+  HUMFL1,0.0,0 - Extremely negative (Unhappy)
+  HUMFL1,5.0,5 - Neither positive nor negative
+  HUMFL1,10.0,10 - Extremely positive (Happy)
   ```
-- **Contains**: Variable name, original numeric value, and descriptive label
-- **Updated**: Automatically extracted from SPSS metadata
-- **User Action**: None required - these preserve your original SPSS value labels
+- **Source**: Extracted directly from SPSS file metadata
+- **User Action**: None required - preserves original SPSS value labels
 
-#### 2. HARDCODED (Pre-configured by Developers)
-
-These files contain core system configurations that define how the package operates. They can be edited by users for customization but come with sensible defaults.
+#### Tier 2: HARDCODED FILES (User Configurable)
 
 **Location**: `wave_visualizer/settings/visualization_settings/`
 
-**a) wave_definitions.csv**
-- **Purpose**: Defines available survey waves and their column prefixes
-- **Structure**:
+These files define core system behavior and can be customized by users.
+
+**`wave_definitions.csv`** (Wave Configuration)
+- **Purpose**: Defines available survey waves and their column naming patterns
+- **Current Content**:
   ```csv
   wave_name,column_prefix,description
   Wave1,W1_,First wave data collection
   Wave2,W2_,Second wave data collection
   Wave3,W3_,Third wave data collection
   ```
-- **How to Use**: Add new rows for additional waves
+- **How to Add New Waves**: 
   ```csv
   Wave4,W4_,Fourth wave data collection
   Wave5,W5_,Fifth wave data collection
+  Wave6,W6_,Sixth wave data collection
   ```
-- **User Action**: Edit to add support for additional survey waves (W4, W5, etc.)
+- **Column Prefix Logic**: Must match your SPSS data column naming (e.g., W4_income, W4_education)
+- **Effect**: Immediately enables new wave configurations (w1_to_w4, w4_to_w6, etc.)
 
-**b) value_color_mappings.csv**
-- **Purpose**: Assigns specific colors to categorical values for consistent visualization
-- **Structure**:
+**`value_color_mappings.csv`** (Visual Color Assignments)
+- **Purpose**: Assigns specific colors to categorical values for visual consistency
+- **Current Content**:
   ```csv
   variable_name,value_name,color_hex,description
-  PID1_labeled,Republican,#d62728,Color for Republican
-  PID1_labeled,Democrat,#1f77b4,Color for Democrat
-  PID1_labeled,Independent,#2ca02c,Color for Independent
-  PID1_labeled,Strong Republican,#d62728,Color for Strong Republican
+  PID1_labeled,Republican,#d62728,Traditional red for Republican
+  PID1_labeled,Democrat,#1f77b4,Traditional blue for Democrat
+  PID1_labeled,Independent,#2ca02c,Green for Independent
+  HFClust_labeled,Thriving,#2E8B57,Dark green for thriving
+  HFClust_labeled,Struggling,#FF8C00,Orange for struggling
+  HFClust_labeled,Suffering,#dc143c,Red for suffering
   ```
-- **How to Use**: Add color mappings for your specific variables
+- **How to Add Color Mappings**:
   ```csv
-  # Add new mappings for different variables
-  education_level,High School,#ff7f0e,Orange for high school
-  education_level,College,#2ca02c,Green for college
-  education_level,Graduate,#1f77b4,Blue for graduate
+  education_level,High School,#ff7f0e,Orange for high school education
+  education_level,College,#2ca02c,Green for college education
+  education_level,Graduate,#1f77b4,Blue for graduate education
+  income_bracket,Low Income,#8B0000,Dark red for low income
+  income_bracket,Middle Income,#FFD700,Gold for middle income
+  income_bracket,High Income,#006400,Dark green for high income
   ```
-- **User Action**: Customize colors for your categorical variables to ensure consistent visualization themes
+- **Color Format**: Use 6-character hex codes (e.g., #FF6B6B)
+- **Effect**: Ensures consistent colors across all visualizations for specific values
 
-#### 3. USER-GUIDED (Generated Through Interactive Process)
-
-These files store user decisions made during interactive data cleaning sessions. Python creates them based on your choices, and they persist your preferences for future use.
+#### Tier 3: USER-GUIDED FILES (Interactive Generation)
 
 **Location**: `wave_visualizer/settings/cleaning_settings/`
 
-**a) missing_value_settings.csv**
-- **Created by**: `value_missing_and_dropping_handler.py` during interactive cleaning
-- **Purpose**: Stores user decisions about which values to treat as missing/invalid
-- **Structure**:
+These files store user decisions made during interactive data cleaning sessions.
+
+**`missing_value_settings.csv`** (Missing Value Handling Decisions)
+- **Creator**: User choices during interactive cleaning with `value_missing_and_dropping_handler.py`
+- **Purpose**: Remembers how to handle specific missing/invalid values
+- **Format**:
   ```csv
   column,strategy,custom_label,impute_method,impute_value
   ppcmdate,mark_unknown,Unknown,,
   wave2_wt,mark_unknown,Unknown,,
   income_level,drop_rows,,,
   age_group,impute_mode,,mode,
+  satisfaction,impute_custom,,custom,7.5
   ```
-- **Contains**: Column name, handling strategy, and imputation parameters
-- **How Created**: During interactive cleaning, you specify:
-  - Which values should be treated as missing (e.g., -999, "Prefer not to say")
-  - Whether to drop rows, mark as unknown, or impute values
-  - Imputation method if applicable (mean, mode, median, custom value)
-- **User Action**: Generated automatically during guided cleaning - no manual editing needed
+- **Strategies**:
+  - `mark_unknown`: Replace with specified label (preserves cases)
+  - `drop_rows`: Remove rows with missing values (reduces dataset size)
+  - `impute_mode`: Replace with most common value
+  - `impute_mean`: Replace with average value (numeric only)
+  - `impute_median`: Replace with middle value (numeric only)
+  - `impute_custom`: Replace with user-specified value
+- **Regeneration**: Delete file to reset all decisions and run interactive cleaning again
 
-**b) value_merging_settings.csv**
-- **Created by**: `value_merging_handler.py` during interactive cleaning
-- **Purpose**: Stores user decisions about combining similar response categories
-- **Structure**:
+**`value_merging_settings.csv`** (Category Merging Decisions)
+- **Creator**: User choices during interactive cleaning with `value_merging_handler.py`
+- **Purpose**: Remembers which categories to combine for cleaner analysis
+- **Format**:
   ```csv
   column_name,source_value,target_value
-  PID1,Something else,Independent
-  PID1,Other,Independent
   PID1,Strong Democrat,Democrat
   PID1,Weak Democrat,Democrat
+  PID1,Strong Republican,Republican
+  PID1,Weak Republican,Republican
+  PID1,Something else,Independent
+  PID1,Other,Independent
   party_affiliation,No preference,Independent
+  education_level,Some college,College
+  education_level,Community college,College
   ```
-- **Contains**: Original value names and what they should be merged into
-- **How Created**: During interactive cleaning, you specify:
-  - Which categories should be combined (e.g., "Strong Democrat" + "Weak Democrat" -> "Democrat")
-  - How to handle "Other" or ambiguous responses
-  - Standardization of similar categories across waves
-- **User Action**: Generated automatically during guided cleaning - no manual editing needed
+- **Use Cases**:
+  - Simplify complex party affiliations
+  - Standardize education categories
+  - Handle "Other" and ambiguous responses
+  - Merge similar response options across waves
+- **Regeneration**: Delete file to reset all merging decisions
 
-### How to Use Each Type
+### Settings File Management
 
-#### Working with Auto-Generated Files
-```python
-# These are created automatically - just run data cleaning
-from wave_visualizer.data_prep.cleaning import DataCleaningPipeline
-pipeline = DataCleaningPipeline()
-pipeline.run_full_pipeline("your_data.sav", interactive=True)
-# variable_labels.csv and value_labels.csv are now created/updated
+#### Backup Strategy
+```bash
+# Before major changes, backup user settings
+cp wave_visualizer/settings/cleaning_settings/missing_value_settings.csv backup_missing_$(date +%Y%m%d).csv
+cp wave_visualizer/settings/cleaning_settings/value_merging_settings.csv backup_merging_$(date +%Y%m%d).csv
+cp wave_visualizer/settings/visualization_settings/value_color_mappings.csv backup_colors_$(date +%Y%m%d).csv
 ```
 
-#### Working with Hardcoded Files
-```python
-# Method 1: Edit CSV files directly
-# Open wave_visualizer/settings/visualization_settings/wave_definitions.csv
-# Add: Wave4,W4_,Fourth wave data collection
+#### Version Control Guidelines
+- **Include in Git**: `wave_definitions.csv`, `value_color_mappings.csv`
+- **Exclude from Git**: `processed_data.csv`, `variable_labels.csv`, `value_labels.csv`
+- **Optional for Git**: `missing_value_settings.csv`, `value_merging_settings.csv` (team decision)
 
-# Method 2: Use Python functions
+#### Troubleshooting Settings
+- **Corrupted auto-generated files**: Re-run data cleaning pipeline
+- **Lost cleaning decisions**: Delete user-guided files and re-run interactive cleaning
+- **Color mapping issues**: Verify hex color format and variable names match data
+
+## Integrating New Waves
+
+### Complete Wave Integration Process
+
+Adding new survey waves to Wave Visualizer is designed to be straightforward and requires minimal configuration changes.
+
+#### Step 1: Data Preparation Requirements
+
+Before integrating new waves, ensure your SPSS data follows the expected format:
+
+**Column Naming Convention**
+- New wave columns must follow the pattern: `W{n}_variablename`
+- Examples: `W4_income`, `W4_education`, `W4_satisfaction`
+- Must be consistent across all variables in the new wave
+
+**Data Structure Requirements**
+```spss
+# Required columns for Wave 4 integration:
+W4_PID1          (Political party - numeric codes)
+W4_income        (Income level - numeric codes)  
+W4_education     (Education level - numeric codes)
+W4_satisfaction  (Life satisfaction - numeric scale)
+# ... other variables with W4_ prefix
+```
+
+#### Step 2: Wave Definition Configuration
+
+**Method 1: Using Python API (Recommended)**
+```python
 import wave_visualizer
-wave_visualizer.add_wave_definition('Wave4', 'W4_', 'Fourth wave data collection')
-wave_visualizer.add_color_mapping('education_level', 'Graduate', '#1f77b4', 'Blue for graduate degree')
-```
 
-#### Working with User-Guided Files
-```python
-# These are created during interactive cleaning sessions
-pipeline = DataCleaningPipeline()
-success = pipeline.run_full_pipeline(
-    data_file_path="your_data.sav",
-    interactive=True  # This enables user guidance
+# Add Wave 4 definition
+wave_visualizer.add_wave_definition(
+    wave_name='Wave4',
+    column_prefix='W4_',
+    description='Fourth wave data collection - Post-election survey'
 )
-# You'll be prompted to make decisions about:
-# - Which values to treat as missing
-# - How to merge similar categories
-# - Your choices are saved in missing_value_settings.csv and value_merging_settings.csv
+
+# Add Wave 5 definition  
+wave_visualizer.add_wave_definition(
+    wave_name='Wave5',
+    column_prefix='W5_',
+    description='Fifth wave data collection - One year follow-up'
+)
+
+# Verify new waves are available
+available_waves = wave_visualizer.get_available_waves()
+print(f"Available waves: {available_waves}")  # Should include [1, 2, 3, 4, 5]
+
+# View all wave definitions
+wave_visualizer.list_wave_definitions()
 ```
 
-### File Management Best Practices
-
-1. **Auto-Generated Files**: Never edit manually - regenerate by running data cleaning
-2. **Hardcoded Files**: Edit carefully and keep backups - these affect core functionality
-3. **User-Guided Files**: Delete to reset preferences and run interactive cleaning again
-4. **Version Control**: Include hardcoded files in git, exclude auto-generated files
-5. **Backup Strategy**: Keep copies of user-guided files before major data pipeline changes
-
-### Settings File Dependencies
-
-```
-Data Cleaning Pipeline
-├── Reads: Raw SPSS data
-├── Creates: variable_labels.csv (auto-generated)
-├── Creates: value_labels.csv (auto-generated)
-├── Uses: missing_value_settings.csv (if exists)
-├── Uses: value_merging_settings.csv (if exists)
-└── Outputs: processed_data.csv
-
-Visualization System
-├── Reads: processed_data.csv
-├── Uses: wave_definitions.csv (hardcoded)
-├── Uses: value_color_mappings.csv (hardcoded)
-└── Outputs: Interactive visualizations
+**Method 2: Direct CSV Editing**
+```csv
+# Edit: wave_visualizer/settings/visualization_settings/wave_definitions.csv
+wave_name,column_prefix,description
+Wave1,W1_,First wave data collection
+Wave2,W2_,Second wave data collection
+Wave3,W3_,Third wave data collection
+Wave4,W4_,Fourth wave data collection - Post-election survey
+Wave5,W5_,Fifth wave data collection - One year follow-up
 ```
 
-This three-tier system ensures that the package can handle complex data processing requirements while maintaining user control over critical decisions and providing sensible defaults for common configurations.
+#### Step 3: Data Processing Pipeline
 
-## Installation & Setup
+Once wave definitions are added, process your expanded dataset:
 
-### Method 1: No-Code Installation
+```python
+from wave_visualizer.data_prep.cleaning import DataCleaningPipeline
 
-1. Download the project ZIP file from GitHub
-2. Extract to your computer
-3. Double-click the appropriate launcher:
-   - **Windows**: `no_code/run_examples.bat`
-   - **Mac/Linux**: `no_code/run_examples.sh`
+# Initialize the cleaning pipeline
+pipeline = DataCleaningPipeline()
 
-The launcher will automatically:
-- Install conda (if needed)
-- Set up the Python environment
-- Generate all example visualizations
-- Save results as HTML + PNG files
+# Process the expanded dataset with new waves
+success = pipeline.run_full_pipeline(
+    data_file_path="expanded_survey_W1_W2_W3_W4_W5.sav",
+    interactive=True  # Provides guidance for new wave data
+)
 
-### Method 2: Developer Installation
+if success:
+    print("Data processing complete! New waves are now available.")
+else:
+    print("Data processing encountered issues. Check logs for details.")
+```
+
+#### Step 4: Immediate Wave Configuration Usage
+
+After adding wave definitions, you can immediately use new wave configurations:
+
+**Available New Configurations**
+```python
+# W4 configurations
+'w1_to_w4'  # Wave 1 to Wave 4 (skip W2, W3)
+'w2_to_w4'  # Wave 2 to Wave 4 (skip W3)
+'w3_to_w4'  # Wave 3 to Wave 4 (consecutive)
+
+# W5 configurations  
+'w1_to_w5'  # Wave 1 to Wave 5 (long-term tracking)
+'w4_to_w5'  # Wave 4 to Wave 5 (recent transition)
+
+# Any combination is valid if both waves exist
+'w2_to_w5'  # Wave 2 to Wave 5
+'w3_to_w5'  # Wave 3 to Wave 5
+```
+
+**Immediate Visualization Creation**
+```python
+# Create visualizations with new wave configurations
+fig, stats = wave_visualizer.create_alluvial_visualization(
+    variable_name='PID1_labeled',
+    wave_config='w1_to_w4',  # Using new Wave 4
+    filter_column='education_labeled',
+    filter_value='College Graduate'
+)
+
+# Export the new visualization
+wave_visualizer.export_figure(fig, 'education_political_w1_w4')
+
+# Long-term tracking visualization
+fig_longterm, stats_longterm = wave_visualizer.create_heatmap_visualization(
+    variable_name='satisfaction_labeled',
+    wave_config='w1_to_w5',  # Full 5-wave tracking
+    show_plot=False
+)
+
+wave_visualizer.export_figure(fig_longterm, 'satisfaction_longterm_w1_w5')
+```
+
+#### Step 5: Color Mapping for New Variables
+
+If your new waves introduce new categorical values, add color mappings:
+
+```python
+# Add color mappings for new variables or values
+wave_visualizer.add_color_mapping(
+    variable_name='satisfaction_level',
+    value_name='Very Satisfied',
+    color_hex='#2E8B57',
+    description='Dark green for very satisfied'
+)
+
+wave_visualizer.add_color_mapping(
+    variable_name='satisfaction_level', 
+    value_name='Somewhat Satisfied',
+    color_hex='#90EE90',
+    description='Light green for somewhat satisfied'
+)
+
+wave_visualizer.add_color_mapping(
+    variable_name='satisfaction_level',
+    value_name='Neutral', 
+    color_hex='#FFD700',
+    description='Gold for neutral satisfaction'
+)
+
+wave_visualizer.add_color_mapping(
+    variable_name='satisfaction_level',
+    value_name='Somewhat Dissatisfied',
+    color_hex='#FF8C00', 
+    description='Orange for somewhat dissatisfied'
+)
+
+wave_visualizer.add_color_mapping(
+    variable_name='satisfaction_level',
+    value_name='Very Dissatisfied',
+    color_hex='#DC143C',
+    description='Red for very dissatisfied'
+)
+```
+
+#### Step 6: Update Example Scripts
+
+Modify existing example scripts or create new ones for new wave analyses:
+
+```python
+# Create: example_visualizations/political_w1_w5_longterm.py
+"""
+Long-term Political Party Analysis: W1 to W5 Transitions
+Complete 5-wave tracking of political affiliation changes
+"""
+
+import wave_visualizer
+
+print("Long-term Political Analysis: W1 to W5 (5-Wave Tracking)")
+print("=" * 60)
+
+# Democratic voters long-term analysis
+dem_longterm, dem_stats = wave_visualizer.create_alluvial_visualization(
+    variable_name='PID1_labeled',
+    wave_config='w1_to_w5',  # 5-wave tracking
+    filter_column='age_group_labeled',
+    filter_value='Young Adults',
+    show_plot=False
+)
+wave_visualizer.export_figure(dem_longterm, 'young_democrats_longterm_w1_w5')
+
+# Create intermediate transition analysis
+w4_to_w5, w4_w5_stats = wave_visualizer.create_heatmap_visualization(
+    variable_name='PID1_labeled',
+    wave_config='w4_to_w5',  # Recent transition
+    show_plot=False
+)
+wave_visualizer.export_figure(w4_to_w5, 'political_recent_w4_w5')
+```
+
+#### Step 7: Validation and Testing
+
+Verify that new wave integration works correctly:
+
+```python
+# Test wave configuration validation
+def test_new_waves():
+    """Test that new waves work correctly"""
+    
+    # Test available waves
+    waves = wave_visualizer.get_available_waves()
+    assert 4 in waves, "Wave 4 should be available"
+    assert 5 in waves, "Wave 5 should be available"
+    
+    # Test wave configuration parsing  
+    from wave_visualizer.data_prep.wave_parser import _get_wave_parser
+    parser = _get_wave_parser()
+    
+    # Test new configurations
+    w1_w4 = parser.parse_wave_config('w1_to_w4')
+    assert w1_w4 is not None, "w1_to_w4 should be valid"
+    
+    w4_w5 = parser.parse_wave_config('w4_to_w5') 
+    assert w4_w5 is not None, "w4_to_w5 should be valid"
+    
+    print("✓ All new wave configurations are working correctly")
+
+# Run validation
+test_new_waves()
+```
+
+### Advanced Wave Integration Scenarios
+
+#### Scenario 1: Non-Sequential Wave Numbering
+
+If your waves aren't numbered sequentially (e.g., W1, W3, W7), you can still integrate them:
+
+```python
+# Add non-sequential waves
+wave_visualizer.add_wave_definition('Wave7', 'W7_', 'Special follow-up wave')
+wave_visualizer.add_wave_definition('Wave10', 'W10_', 'Decade follow-up wave')
+
+# Use them in configurations
+fig, stats = wave_visualizer.create_alluvial_visualization(
+    variable_name='career_satisfaction',
+    wave_config='w1_to_w7',  # 6-year gap analysis
+    show_plot=False
+)
+```
+
+#### Scenario 2: Multiple Column Prefix Patterns
+
+If different variables use different prefixes, you can define multiple wave definitions:
+
+```python
+# For mixed prefix patterns
+wave_visualizer.add_wave_definition('Wave4_Standard', 'W4_', 'Standard W4 variables')
+wave_visualizer.add_wave_definition('Wave4_Special', 'WAVE4_', 'Special W4 variables')
+```
+
+#### Scenario 3: Retroactive Wave Addition
+
+If you need to add waves to existing processed data:
+
+```python
+# Add new wave definition
+wave_visualizer.add_wave_definition('Wave6', 'W6_', 'Sixth wave')
+
+# Re-process data to include new wave
+pipeline = DataCleaningPipeline()
+pipeline.run_full_pipeline(
+    data_file_path="complete_survey_W1_W6.sav",
+    interactive=False,  # Use existing settings
+    overwrite_existing=True  # Replace processed_data.csv
+)
+```
+
+### Wave Integration Best Practices
+
+1. **Consistent Naming**: Ensure all variables in new waves follow the same prefix pattern
+2. **Data Validation**: Verify data quality before integration
+3. **Backup Settings**: Save existing settings before major updates
+4. **Test Incrementally**: Add one wave at a time and test thoroughly
+5. **Document Changes**: Update project documentation with new wave details
+6. **Color Consistency**: Plan color schemes that work across all waves
+7. **Performance Monitoring**: Monitor memory usage with large multi-wave datasets
+
+## Development Workflow
+
+### Setting Up Development Environment
 
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/michaelnapoli404/wave-visualizer.git
 cd wave-visualizer
 
-# Install with image export capabilities
-pip install -e ".[image-export]"
-
-# Or install with development tools
-pip install -e ".[dev,test]"
-```
-
-### Environment Setup
-
-The package uses conda for environment management:
-
-```bash
-# Create environment from environment.yml
+# Create and activate conda environment  
 conda env create -f environment.yml
-
-# Activate environment
 conda activate goldman_env
 
-# Install package in development mode
-pip install -e .
+# Install in development mode with all dependencies
+make setup-dev
+
+# Verify installation
+python -c "import wave_visualizer; print('Installation successful')"
 ```
 
-## No-Code Usage
-
-The no-code solution is designed for researchers who want professional visualizations without programming.
-
-### Features
-
-- **Zero Setup**: Automatic conda installation and environment setup
-- **One-Click Generation**: Run all examples with a single double-click
-- **Professional Output**: HTML + PNG exports for presentations
-- **Easy Customization**: Edit Python files intuitively to change analysis parameters
-
-### Generated Visualizations
-
-Each run creates 9 professional visualizations (3 per political party):
-
-**Democratic Voters:**
-- `democrat_alluvial_w1_w3.html/.png` - Flow diagram of transitions
-- `democrat_heatmap_w1_w3.html/.png` - Percentage transition matrix
-- `democrat_patterns_w1_w3.html/.png` - Ranked transition patterns
-
-**Republican Voters:**
-- `republican_alluvial_w1_w3.html/.png`
-- `republican_heatmap_w1_w3.html/.png`
-- `republican_patterns_w1_w3.html/.png`
-
-**Independent Voters:**
-- `independent_alluvial_w1_w3.html/.png`
-- `independent_heatmap_w1_w3.html/.png`
-- `independent_patterns_w1_w3.html/.png`
-
-### Customization Without Coding
-
-Edit `example_visualizations/political_w1_w3.py`:
-
-```python
-# Change the political party filter
-filter_value='Independent'  # Change to: 'Democrat', 'Republican', etc.
-
-# Change the wave transition
-wave_config='w1_to_w2'     # Change to: 'w1_to_w3', 'w2_to_w3', etc.
-
-# Change the variable being analyzed
-variable_name='NewVariable_labeled'  # Change to any wave-prefixed variable
-```
-
-## API Reference
-
-### Main Visualization Functions
-
-#### `create_alluvial_visualization()`
-
-Creates Sankey diagrams showing transitions between categories across waves.
-
-```python
-wave_visualizer.create_alluvial_visualization(
-    variable_name='HFClust_labeled',    # Variable to analyze
-    wave_config='w1_to_w3',             # Wave transition configuration
-    filter_column='PID1_labeled',       # Optional: Column to filter by
-    filter_value='Republican',          # Optional: Value to filter for
-    data=None,                          # Optional: Custom dataset
-    show_plot=True                      # Whether to display plot
-) -> Tuple[go.Figure, Dict[str, Any]]
-```
-
-**Returns**: Tuple of (Plotly Figure, Statistics Dictionary)
-
-**New Features**:
-- Separate nodes for each wave (e.g., "Flourishing (W1)" vs "Flourishing (W3)")
-- Proper left-right flow layout
-- Automatic positioning with `arrangement="snap"`
-
-#### `create_heatmap_visualization()`
-
-Creates percentage-based transition matrices with color intensity.
-
-```python
-wave_visualizer.create_heatmap_visualization(
-    variable_name='HFClust_labeled',
-    wave_config='w1_to_w3',
-    filter_column='PID1_labeled',
-    filter_value='Democrat',
-    data=None,
-    show_plot=True
-) -> Tuple[go.Figure, Dict[str, Any]]
-```
-
-**Updated Features**:
-- Red colorscale (`colorscale='Reds'`)
-- Percentage values displayed on cells (`texttemplate="%{text:.1f}%"`)
-- 600x800 dimensions for consistency
-- Row-wise percentage normalization
-
-#### `create_pattern_analysis_visualization()`
-
-Creates horizontal bar charts showing ranked transition patterns.
-
-```python
-wave_visualizer.create_pattern_analysis_visualization(
-    variable_name='HFClust_labeled',
-    wave_config='w1_to_w3',
-    filter_column='PID1_labeled',
-    filter_value='Independent',
-    data=None,
-    show_plot=True
-) -> Tuple[go.Figure, Dict[str, Any]]
-```
-
-**Updated Features**:
-- Horizontal bar orientation
-- Green bars for stable patterns (#2E8B57)
-- Orange bars for change patterns (#FF8C00)
-- Top 15 patterns displayed
-- Count and percentage labels outside bars
-
-### Export Functions
-
-#### `export_figure()`
-
-Exports visualizations to multiple formats with automatic path detection.
-
-```python
-wave_visualizer.export_figure(
-    fig,                                # Plotly Figure object
-    filename,                          # Base filename (no extension)
-    formats=['html', 'png']            # List of export formats
-) -> Dict[str, str]
-```
-
-**Supported Formats**: 'html', 'png', 'svg', 'pdf'
-
-**Auto-Detection**: Automatically detects if called from `example_visualizations/` and exports to the correct location.
-
-## Visualization Types
-
-### 1. Alluvial Plots (Sankey Diagrams)
-
-**Purpose**: Show flow of respondents between categories across waves
-
-**Key Features**:
-- Separate nodes for each wave
-- Flow thickness represents count
-- Color-coded by source category
-- Interactive hover information
-
-**Best For**: Understanding overall transition patterns and flow directions
-
-### 2. Heatmaps
-
-**Purpose**: Display transition probabilities as color intensity matrices
-
-**Key Features**:
-- Percentage-based values
-- Red colorscale for intensity
-- Row-wise normalization
-- Diagonal shows stability
-
-**Best For**: Quantitative analysis of transition probabilities
-
-### 3. Pattern Analysis
-
-**Purpose**: Rank most common transition patterns
-
-**Key Features**:
-- Horizontal bar layout
-- Color-coded by pattern type
-- Top 15 patterns shown
-- Count and percentage labels
-
-**Best For**: Identifying specific transition patterns and their frequency
-
-## Configuration System
-
-### Wave Configuration
-
-The package uses a flexible wave configuration system:
-
-```python
-# Supported wave configs
-'w1_to_w2'    # Wave 1 to Wave 2
-'w1_to_w3'    # Wave 1 to Wave 3 (skipping Wave 2)
-'w2_to_w3'    # Wave 2 to Wave 3
-# Add more as needed
-```
-
-### Color Mapping
-
-Semantic color mapping ensures consistency across visualizations:
-
-```python
-# Default color mappings for HFClust_labeled
-{
-    'Suffering': '#8B0000',      # Dark red
-    'Searching': '#FF6B6B',      # Light red  
-    'Resilient': '#4CAF50',      # Green
-    'Flourishing': '#2E7D32'     # Dark green
-}
-```
-
-### Plot Parameters
-
-Configurable visual parameters:
-
-```python
-plot_params = {
-    'figure_width': 1200,
-    'figure_height': 800,
-    'title_size': 20,
-    'label_size': 12,
-    'node_padding': 15,
-    'node_thickness': 20,
-    'margin_left': 100,
-    'margin_right': 100,
-    'margin_top': 100,
-    'margin_bottom': 50
-}
-```
-
-## Data Processing Pipeline
-
-### Input Requirements
-
-- **SPSS Files**: .sav format with labeled variables
-- **Wave-Prefixed Columns**: Variables named like `W1_variable`, `W2_variable`
-- **Categorical Data**: Labeled categorical variables for meaningful visualization
-
-### Processing Steps
-
-1. **Data Loading**: Read SPSS files with `pyreadstat`
-2. **Column Validation**: Verify wave-prefixed columns exist
-3. **Data Cleaning**: Handle missing values and inconsistencies
-4. **Filtering**: Apply optional row/column filters
-5. **Transition Creation**: Generate transition matrices
-6. **Visualization**: Create plots with appropriate styling
-
-### Filtering System
-
-```python
-# Example filtering
-settings = {
-    "filters": [{
-        "column": "PID1_labeled",
-        "values": ["Democrat", "Republican"]
-    }]
-}
-```
-
-## Export System
-
-### Automatic Path Detection
-
-The export system automatically detects the calling context:
-
-```python
-# If called from example_visualizations/script.py
-exports_to = "example_visualizations/exports/"
-
-# If called from project root
-exports_to = "exports/"
-```
-
-### Export Formats
-
-- **HTML**: Interactive Plotly visualizations
-- **PNG**: High-resolution static images (1200x800, scale=2)
-- **SVG**: Vector graphics for publications
-- **PDF**: Print-ready documents
-
-### File Organization
-
-```
-example_visualizations/exports/
-├── democrat_alluvial_w1_w3.html
-├── democrat_alluvial_w1_w3.png
-├── democrat_heatmap_w1_w3.html
-├── democrat_heatmap_w1_w3.png
-├── democrat_patterns_w1_w3.html
-├── democrat_patterns_w1_w3.png
-└── ... (repeat for republican/independent)
-```
-
-## Development Guide
-
-### Code Quality Standards
-
-- **Type Hints**: All functions have complete type annotations
-- **Docstrings**: Google-style docstrings for all public APIs
-- **Logging**: Comprehensive logging with configurable levels
-- **Error Handling**: Custom exception hierarchy
-- **Testing**: Unit and integration tests with pytest
-
-### Development Setup
+### Code Quality Workflow
 
 ```bash
-# Install development dependencies
-pip install -e ".[dev,test]"
-
-# Run code formatting
-make format
+# Format code
+make format           # Runs black and isort
 
 # Run all quality checks
-make all-checks
+make all-checks       # Lint, type check, security scan
 
 # Run tests with coverage
-make test
+make test-cov         # Generates HTML coverage report
+
+# Run pre-commit hooks
+make pre-commit       # Validate staged changes
 ```
 
-### Pre-commit Hooks
+### Building and Distribution
 
 ```bash
-# Install pre-commit hooks
-pre-commit install
+# Build package for distribution
+make build            # Creates wheel and source distributions
 
-# Run hooks manually
-pre-commit run --all-files
+# Test installation from build
+pip install dist/wave_visualizer-0.1.0-py3-none-any.whl
+
+# Create release
+make release-check    # Validates release readiness
 ```
 
-### Testing
+## User Interaction Patterns
 
+### No-Code Users
+
+1. **Download** project ZIP from GitHub
+2. **Extract** to local directory
+3. **Double-click** appropriate launcher (`.bat` for Windows, `.sh` for Mac/Linux)
+4. **Wait** for automatic setup and visualization generation
+5. **View** results in `example_visualizations/exports/` directory
+
+### Python Developers
+
+1. **Install** package: `pip install wave-visualizer`
+2. **Import** and use: `import wave_visualizer`
+3. **Create** visualizations with one-line function calls
+4. **Export** results to desired formats
+5. **Customize** through configuration and color mapping
+
+### Data Scientists
+
+1. **Install** with development dependencies: `pip install "wave-visualizer[dev]"`
+2. **Process** raw SPSS data through cleaning pipeline
+3. **Configure** wave definitions and color mappings
+4. **Generate** multiple visualizations programmatically
+5. **Integrate** into larger analysis workflows
+
+### Researchers
+
+1. **Use** no-code solution for initial exploration
+2. **Customize** example scripts for specific research questions
+3. **Configure** wave transitions and filtering parameters
+4. **Export** publication-ready visualizations
+5. **Document** analysis methodology using generated statistics
+
+## Dependencies and Environment
+
+### Core Dependencies
+
+- **pandas >= 1.3.0**: Data manipulation and analysis
+- **plotly >= 5.0.0**: Interactive visualization generation
+- **numpy >= 1.20.0**: Numerical operations and array processing
+- **pyreadstat >= 1.1.0**: SPSS file reading and metadata extraction
+
+### Optional Dependencies
+
+**Image Export**
+- **kaleido >= 0.2.1**: High-quality image export (PNG, SVG, PDF)
+- **psutil >= 5.8.0**: System resource monitoring during export
+
+**Development Tools**
+- **black >= 23.0.0**: Code formatting
+- **isort >= 5.12.0**: Import sorting
+- **mypy >= 1.0.0**: Static type checking
+- **pytest >= 7.0.0**: Testing framework
+- **flake8 >= 6.0.0**: Code linting
+
+### Environment Configuration
+
+**Conda Environment (Recommended)**
+- Provides isolated environment with all dependencies
+- Includes Jupyter notebook support for interactive development
+- Automatic dependency resolution and version management
+- Cross-platform compatibility
+
+**Virtual Environment Alternative**
 ```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=wave_visualizer
-
-# Run specific test categories
-pytest -m unit
-pytest -m integration
+python -m venv wave_viz_env
+source wave_viz_env/bin/activate  # Linux/Mac
+# or
+wave_viz_env\Scripts\activate     # Windows
+pip install wave-visualizer[all]
 ```
 
-## Architecture Details
+### System Requirements
 
-### Package Structure
-
-```
-wave_visualizer/
-├── __init__.py                      # Main package interface
-├── config.py                       # Configuration management
-├── exceptions.py                    # Custom exception hierarchy
-├── validators.py                    # Input validation
-├── interfaces.py                    # Abstract base classes
-├── data_prep/                       # Data processing
-│   ├── cleaning/                   # Data cleaning modules
-│   ├── customization.py           # Color and style config
-│   ├── export_handler.py          # Export functionality
-│   └── wave_parser.py             # Wave configuration parsing
-├── visualization_techs/             # Visualization generators
-│   ├── alluvial_plots.py          # Alluvial/Sankey diagrams
-│   ├── alluvial_builder.py        # Builder pattern implementation
-│   ├── heatmaps.py                # Transition heatmaps
-│   └── transition_pattern_analysis.py # Pattern bar charts
-├── utils/                          # Utilities
-│   └── logger.py                  # Logging system
-└── settings/                       # Configuration files
-    ├── processed_data.csv         # Cleaned dataset
-    ├── wave_definitions.csv       # Wave configurations
-    └── color_mappings.csv         # Color schemes
-```
-
-### Design Patterns
-
-- **Builder Pattern**: `AlluvialVisualizationBuilder` for complex visualization construction
-- **Strategy Pattern**: Data cleaning operations
-- **Factory Pattern**: Visualization and data handler creation
-- **Observer Pattern**: Progress monitoring
-- **Command Pattern**: Undoable data transformations
-
-### Dependencies
-
-#### Core Dependencies
-- `pandas >= 1.3.0` - Data manipulation
-- `plotly >= 5.0.0` - Interactive visualizations
-- `numpy >= 1.20.0` - Numerical operations
-- `pyreadstat >= 1.1.0` - SPSS file reading
-
-#### Optional Dependencies
-- `kaleido >= 0.2.1` - Image export
-- `black >= 22.0.0` - Code formatting
-- `mypy >= 0.950` - Type checking
-- `pytest >= 7.0.0` - Testing framework
-
-### Performance Considerations
-
-- **Lazy Loading**: Data loaded only when needed
-- **Caching**: Processed data cached for repeated use
-- **Memory Management**: Efficient handling of large datasets
-- **Export Optimization**: Parallel export for multiple formats
-
-## Troubleshooting
-
-### Common Issues
-
-1. **conda not found**
-   - Solution: Use automatic installation in no-code launcher
-
-2. **Module import errors**
-   - Solution: Ensure package installed with `pip install -e .`
-
-3. **Export path issues**
-   - Solution: Updated export handler automatically detects correct paths
-
-4. **Visualization display issues**
-   - Solution: Use `show_plot=False` and rely on export functionality
-
-### Support
-
-- **GitHub Issues**: Report bugs and feature requests
-- **Documentation**: This file and inline docstrings
-- **Examples**: Complete working examples in `example_visualizations/`
-
-## License
-
-MIT License - see LICENSE file for details.
-
-## Changelog
-
-### Version 0.1.0 (Current)
-
-**Major Features:**
-- Complete package restructure with professional architecture
-- Fixed alluvial plots with separate wave nodes
-- Enhanced heatmaps with percentage-based matrices
-- Improved pattern analysis with horizontal bars
-- No-code solution with automatic conda installation
-- Comprehensive export system with auto-path detection
-- Type-safe APIs with full IDE support
-
-**Technical Improvements:**
-- Builder pattern for alluvial visualizations
-- Centralized logging system
-- Custom exception hierarchy
-- Comprehensive input validation
-- Professional code quality standards
-- Complete test suite coverage 
+- **Python**: 3.8 or higher
+- **Memory**: Minimum 4GB RAM (8GB+ recommended for large datasets)
+- **Storage**: 1GB free space for environment and dependencies
+- **Platform**: Windows, macOS, Linux (any platform supporting Python and conda) 
