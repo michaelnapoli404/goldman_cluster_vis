@@ -1,0 +1,1101 @@
+variable_name,variable_label
+Respid,
+ppcmdate,Date member completed survey
+WAVE,Wave of Respondent
+wave2_wt,
+wave1_wt,
+total_wt_wv3,
+fresh_wt,
+recontact_wt,
+total_wt,
+weight_pid,
+sno,sno
+ano,ano
+Sample_Type,"HIDE QUES SCREEN - ONLY FOR TESTING
+
+Sample Punching Question"
+dov_sample,dov_sample
+complete_status,complete_status
+HUMFL1,"In general, how positive (happy) or negative (unhappy) do you usually feel these days?"
+HUMFL2,"Overall, to what extent do you feel the things you do in your life are worthwhile?"
+HUMFL3_1,"Please read the statements below. For each one, please tell us whether the statement is not true of you at all or completely true of you. - I understand my purpose in life."
+HUMFL3_2,"Please read the statements below. For each one, please tell us whether the statement is not true of you at all or completely true of you. - Even in difficult and challenging situations I always act to promote good in all circumstances."
+HUMFL3_3,"Please read the statements below. For each one, please tell us whether the statement is not true of you at all or completely true of you. - I am always able to give up some happiness now for greater happiness later."
+HUMFL6_1,Please read the statements below. Please tell us how often you worry about…? - Being able to meet normal monthly living expenses
+HUMFL6_2,"Please read the statements below. Please tell us how often you worry about…? - Safety, food, or housing"
+Fed_Respect,How much do you respect those who serve in the FEDERAL government?
+State_Respect,How much do you respect those who serve in your STATE government?
+Local_Respect,How much do you respect those who serve in your LOCAL government?
+Media_1,"How often, if at all, do you get news or information from the following sources? - FOX News"
+Media_2,"How often, if at all, do you get news or information from the following sources? - CNN or MSNBC"
+Media_3,"How often, if at all, do you get news or information from the following sources? - ABC, CBS, or NBC News"
+Media_4,"How often, if at all, do you get news or information from the following sources? - New York Times, Washington Post, Wall Street Journal, or USA Today"
+Media_5,"How often, if at all, do you get news or information from the following sources? - Conservative online news (e.g., Breitbart, Daily Caller, Newsmax, Instapundit)"
+Media_6,"How often, if at all, do you get news or information from the following sources? - Digital or online news"
+Media_7,"How often, if at all, do you get news or information from the following sources? - Your local newspaper"
+Media_8,"How often, if at all, do you get news or information from the following sources? - Your local TV news"
+Media_9,"How often, if at all, do you get news or information from the following sources? - Public television or radio"
+Media_10,"How often, if at all, do you get news or information from the following sources? - Social media, YouTube, or TikTok"
+Media_11,"How often, if at all, do you get news or information from the following sources? - Newsletters or news items sent directly to you"
+Interest_1_1,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - U.S. Democracy"
+Interest_1_2,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - U.S. Democracy - Voting and Elections"
+Interest_1_3,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - U.S. Democracy – Citizenship rights and freedoms"
+Interest_1_4,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - U.S. Democracy – How to improve it"
+Interest_1_5,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Energy and climate"
+Interest_1_6,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Finance and investment"
+Interest_1_7,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Government and public policy"
+Interest_1_8,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Artificial Intelligence and technology"
+Interest_1_9,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Economics and labor"
+Interest_1_10,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Housing and real estate"
+Interest_1_11,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Personal health and well-being"
+Fed_Trust,How much do you trust the FEDERAL government to do what is right?
+State_Trust,How much do you trust your STATE government to do what is right?
+Local_Trust,How much do you trust your LOCAL government to do what is right?
+Qa_CONWATER_1,To what extent are you unsupportive or supportive of allowing the following entities to manage the regulation of water? - The federal government
+Qa_CONWATER_2,To what extent are you unsupportive or supportive of allowing the following entities to manage the regulation of water? - Your state government
+Qa_CONWATER_3,To what extent are you unsupportive or supportive of allowing the following entities to manage the regulation of water? - Your local government
+Qa_CONWATER_4,To what extent are you unsupportive or supportive of allowing the following entities to manage the regulation of water? - Community organizations and/or non-profit organizations
+Qa_CONWATER_5,To what extent are you unsupportive or supportive of allowing the following entities to manage the regulation of water? - Corporations
+Qb_CONCYBER_1,To what extent are you unsupportive or supportive of allowing the following entities to set standards for cyber security? - The federal government
+Qb_CONCYBER_2,To what extent are you unsupportive or supportive of allowing the following entities to set standards for cyber security? - Your state government
+Qb_CONCYBER_3,To what extent are you unsupportive or supportive of allowing the following entities to set standards for cyber security? - Your local government
+Qb_CONCYBER_4,To what extent are you unsupportive or supportive of allowing the following entities to set standards for cyber security? - Community organizations and/or non-profit organizations
+Qb_CONCYBER_5,To what extent are you unsupportive or supportive of allowing the following entities to set standards for cyber security? - Corporations
+Qc_CONHEALTH_1,To what extent are you unsupportive or supportive of allowing the following entities to set decisions about public health standards and protocols? - The federal government
+Qc_CONHEALTH_2,To what extent are you unsupportive or supportive of allowing the following entities to set decisions about public health standards and protocols? - Your state government
+Qc_CONHEALTH_3,To what extent are you unsupportive or supportive of allowing the following entities to set decisions about public health standards and protocols? - Your local government
+Qc_CONHEALTH_4,To what extent are you unsupportive or supportive of allowing the following entities to set decisions about public health standards and protocols? - Community organizations and/or non-profit organizations
+Qc_CONHEALTH_5,To what extent are you unsupportive or supportive of allowing the following entities to set decisions about public health standards and protocols? - Corporations
+COMP_EFF,"We are interested in which statement comes closer to your views, even if neither is exactly right."
+COMP_MERIT,"We are interested in which statement comes closer to your views, even if neither is exactly right."
+COMPTERROR,"We are interested in which statement comes closer to your views, even if neither is exactly right."
+COMP_SPEECH,"We are interested in which statement comes closer to your views, even if neither is exactly right."
+ONEWORD1a,What one word or phrase would you use to DEFINE American democracy?
+ONEWORD1b,What one word or phrase would you use to DESCRIBE American voters?
+ONEWORD1c,What one word or phrase would you use to DESCRIBE American government?
+Hope1,"Generally speaking, on a scale from 1 to 10 where 10 is “extremely hopeful” and 1 is “extremely worried” how do you feel about the future of American democracy?"
+POLEFFA1_1,Please indicate how much you agree or disagree with the statements below. - I have a good understanding of the political issues facing this country.
+POLEFFA1_2,Please indicate how much you agree or disagree with the statements below. - I know more about politics than most people of my age.
+POLEFFA1_3,Please indicate how much you agree or disagree with the statements below. - Public officials don’t care about what people like me think.
+POLEFFA1_4,Please indicate how much you agree or disagree with the statements below. - I have access to all the information I need to participate in our democracy with confidence.
+VCOMPA1_1_1,Please indicate how much you agree or disagree with the statements below as they relate to NATIONAL elections. - My vote matters a great deal to who wins in national elections.
+VCOMPA1_1_2,Please indicate how much you agree or disagree with the statements below as they relate to NATIONAL elections. - I am well qualified to choose which national candidate to vote for.
+VCOMPA1_1_3,Please indicate how much you agree or disagree with the statements below as they relate to NATIONAL elections. - The outcomes of the 2024 national elections will have a big effect on my life.
+VCOMPA1_1_4,"Please indicate how much you agree or disagree with the statements below as they relate to NATIONAL elections. - If I don’t vote, others will do a good job of picking the right national candidate."
+VCOMPA1_1_5,"Please indicate how much you agree or disagree with the statements below as they relate to NATIONAL elections. - I know a great deal about each national candidate’s policy positions, experience, and other qualities."
+VCOMPA1_1_6,Please indicate how much you agree or disagree with the statements below as they relate to NATIONAL elections. - It is easy for me to figure out which national candidate to vote for.
+VCOMPA1_2_1,Please indicate how much you agree or disagree with the statements below as they relate to your STATE  elections. - My vote matters a great deal to who wins in state elections.
+VCOMPA1_2_2,Please indicate how much you agree or disagree with the statements below as they relate to your STATE  elections. - I am well qualified to choose which state candidates to vote for.
+VCOMPA1_2_3,Please indicate how much you agree or disagree with the statements below as they relate to your STATE  elections. - The outcomes of the 2024 state elections will have a big effect on my life.
+VCOMPA1_2_4,"Please indicate how much you agree or disagree with the statements below as they relate to your STATE  elections. - If I don’t vote, others will do a good job of picking the right state candidates."
+VCOMPA1_2_5,"Please indicate how much you agree or disagree with the statements below as they relate to your STATE  elections. - I know a great deal about each state candidate’s policy positions, experience, and other qualities."
+VCOMPA1_2_6,Please indicate how much you agree or disagree with the statements below as they relate to your STATE  elections. - It is easy for me to figure out which state candidates to vote for.
+VCOMPA1_3_1,Please indicate how much you agree or disagree with the statements below as they relate to your LOCAL  elections. - My vote matters a great deal to who wins in local elections.
+VCOMPA1_3_2,Please indicate how much you agree or disagree with the statements below as they relate to your LOCAL  elections. - I am well qualified to choose which local candidates to vote for.
+VCOMPA1_3_3,Please indicate how much you agree or disagree with the statements below as they relate to your LOCAL  elections. - The outcomes of the 2024 local elections will have a big effect on my life.
+VCOMPA1_3_4,"Please indicate how much you agree or disagree with the statements below as they relate to your LOCAL  elections. - If I don’t vote, others will do a good job of picking the right local candidates."
+VCOMPA1_3_5,"Please indicate how much you agree or disagree with the statements below as they relate to your LOCAL  elections. - I know a great deal about each local candidate’s policy positions, experience, and other qualities."
+VCOMPA1_3_6,Please indicate how much you agree or disagree with the statements below as they relate to your LOCAL  elections. - It is easy for me to figure out which local candidates to vote for.
+DEMPOLICYa1_1,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that ban the use of certain words in government programs"
+DEMPOLICYa1_2,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that promote bail reform"
+DEMPOLICYa1_3,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that make it easier to vote in elections"
+DEMPOLICYa1_4,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that create job training programs for diverse communities"
+DEMPOLICYa1_5,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that require gender neutral bathrooms"
+DEMPOLICYa1_6,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that address racial inequality in voting districts"
+DEMPOLICYa1_7,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that restrict hair styles in schools"
+DEMPOLICYa1_8,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that prevent fraud in public benefits programs"
+CITZEFF1_1,How capable do you think you would be at each of the following? - Researching nonpartisan information about a controversial political or social issue.
+CITZEFF1_2,How capable do you think you would be at each of the following? - Organizing a group of people to achieve changes that help others.
+CITZEFF1_3,How capable do you think you would be at each of the following? - Discussing a newspaper article about a conflict between countries.
+CITZEFF1_4,How capable do you think you would be at each of the following? - Listening to people who hold beliefs that are different than mine.
+TROUBDEMO_1,Please indicate how much you agree or disagree with the statements below. - A time will come when patriotic Americans have to take the law into their own hands.
+TROUBDEMO_2,Please indicate how much you agree or disagree with the statements below. - The main trouble with democracy is that most people don’t really know what’s best for them.
+TROUBDEMO_3,Please indicate how much you agree or disagree with the statements below. - Strong leaders sometimes have to bend the rules in order to get things done.
+TROUBDEMO_4,Please indicate how much you agree or disagree with the statements below. - Strong leaders sometimes have to break the rules in order to get things done.
+TROUBDEMO_5,Please indicate how much you agree or disagree with the statements below. - Strong leaders sometimes have to follow the rules in order to get things done.
+TROUBDEMO_6,Please indicate how much you agree or disagree with the statements below. - The United States is on the brink of a new civil war.
+TROUBDEMO_7,Please indicate how much you agree or disagree with the statements below. - The United States is on the brink of a new civil war over race and ethnicity.
+TROUBDEMO_8,Please indicate how much you agree or disagree with the statements below. - The United States is on the brink of a new civil war over who’s a real American.
+TROUBDEMO_9,Please indicate how much you agree or disagree with the statements below. - I support the use of violence to ensure my party wins.
+TROUBDEMO_10,Please indicate how much you agree or disagree with the statements below. - I support the use of violence to ensure my party wins control of congress.
+TROUBDEMO_11,Please indicate how much you agree or disagree with the statements below. - I support the use of violence to ensure my party wins control of our state legislature.
+TROUBDEMO_12,Please indicate how much you agree or disagree with the statements below. - I support the use of violence to ensure my party wins the presidency.
+Merit_1,Please indicate how much you agree or disagree with the statements below. - I am a good judge of whether another person needs help.
+Merit_2,Please indicate how much you agree or disagree with the statements below. - Everyone has it in their own power to succeed.
+Merit_3,Please indicate how much you agree or disagree with the statements below. - Society suffers when people cannot meet their own basic needs.
+MERIT4_1,Please indicate how much you agree or disagree with this statement. - Public policies that provide economic assistance to people make them too dependent on public support.
+MERIT4_2,Please indicate how much you agree or disagree with this statement. - Public policies that provide economic assistance to farmers make them too dependent on public support.
+MERIT4_3,Please indicate how much you agree or disagree with this statement. - Public policies that provide economic assistance to military veterans make them too dependent on public support.
+MERIT4_4,Please indicate how much you agree or disagree with this statement. - Public policies that provide economic assistance to rural communities make them too dependent on public support.
+MERIT4_5,Please indicate how much you agree or disagree with this statement. - Public policies that provide economic assistance to people who are unemployed make them too dependent on public support.
+MERIT4_6,Please indicate how much you agree or disagree with this statement. - Public policies that provide economic assistance to senior citizens make them too dependent on public support.
+MERIT4_7,Please indicate how much you agree or disagree with this statement. - Public policies that provide economic assistance to racial-ethnic minorities make them too dependent on public support.
+WRACEPRE1,"We are interested in an honest assessment of your feelings about African Americans. 
+
+
+
+Please place yourself on a zero-to-ten scale, where “0” means that you are NOT prejudiced against African Americans at all and where “10” means that you are EXTREMELY prejudiced against African Americans.  Which number would you choose to describe yourself?  You can choose any number between zero and ten."
+WRACEPRE2,"Now, think for a moment about African Americans in the area where you live.  
+
+
+
+Use the same zero-to-ten scale, where “0” means that they are NOT prejudiced against White people at all and where “10” means that they are EXTREMELY prejudiced against White people.  Which number would you choose to describe African Americans in the area where you live?  You can choose any number between zero and ten."
+BRACEPRE1,"We are interested in an honest assessment of your feelings about White people.
+
+
+
+Please place yourself on a zero-to-ten scale, where “0” means that you are NOT prejudiced against White people at all and where “10” means that you are EXTREMELY prejudiced against White people.  Which number would you choose to describe yourself?  You can choose any number between zero and ten."
+BRACEPRE2,"Now, think for a moment about White people in the area where you live.  
+
+
+
+Use the same zero-to-ten scale, where “0” means that they are NOT prejudiced against African Americans at all and where “10” means that they are EXTREMELY prejudiced against African Americans.  Which number would you choose to describe White people in the area where you live?  You can choose any number between zero and ten."
+WRTA_1,Please indicate how much you agree or disagree with the statements below. - I resent any special considerations that Africans Americans receive because it’s unfair to other Americans.
+WRTA_2,"Please indicate how much you agree or disagree with the statements below. - For African Americans to succeed, they need to stop using past racism and slavery as excuses."
+WRTA_3,Please indicate how much you agree or disagree with the statements below. - Special considerations for African Americans place me at an unfair disadvantage because I have done nothing to harm them.
+WRTA_4,Please indicate how much you agree or disagree with the statements below. - African Americans bring up race only when they need to make an excuse for their failure.
+AARTW_1,Please indicate how much you agree or disagree with the statements below. - I resent when Whites deny the existence of racial discrimination.
+AARTW_2,Please indicate how much you agree or disagree with the statements below. - Whites get away with offenses that African Americans would never get away with.
+AARTW_3,Please indicate how much you agree or disagree with the statements below. - Whites do not go to great lengths to understand the problems African Americans face.
+AARTW_4,"Please indicate how much you agree or disagree with the statements below. - Even when African Americans work hard to succeed, Whites still view them in lesser terms."
+WD2_1,"There are many kinds of groups in the world: men and women, ethnic and religious groups, nationalities, political factions. How much do you agree or disagree with each idea about groups in general? - An ideal society requires some groups to be on top and others to be on the bottom."
+WD2_2,"There are many kinds of groups in the world: men and women, ethnic and religious groups, nationalities, political factions. How much do you agree or disagree with each idea about groups in general? - Some groups of people are simply inferior to other groups."
+WD2_3,"There are many kinds of groups in the world: men and women, ethnic and religious groups, nationalities, political factions. How much do you agree or disagree with each idea about groups in general? - No one group should be dominant in society."
+WD2_4,"There are many kinds of groups in the world: men and women, ethnic and religious groups, nationalities, political factions. How much do you agree or disagree with each idea about groups in general? - Groups at the bottom are always just as deserving as groups at the top."
+WD3_1,Please indicate how much you agree or disagree with the statements below. - The American way of life is under attack.
+WD3_2,Please indicate how much you agree or disagree with the statements below. - Things are really out of control in the United States.
+WD3_3,Please indicate how much you agree or disagree with the statements below. - The United States of the past is a much better place than the United States of the future.
+WD3_4,Please indicate how much you agree or disagree with the statements below. - Society is set up so that people usually get what they deserve.
+WD3_5,Please indicate how much you agree or disagree with the statements below. - Everyone has a fair shot at wealth and happiness if they play by the rules.
+WD3_6,Please indicate how much you agree or disagree with the statements below. - We must work hard to defend and preserve the way things are.
+WD3_7,Please indicate how much you agree or disagree with the statements below. - The United States is changing too fast.
+KNOWCIV1_MC,"In the case of a tied vote in the U.S. Senate, is the deciding vote cast by…"
+KNOWCIV1_TF,"In the case of a tied vote in the U.S. Senate, the deciding vote is cast by the vice president."
+KNOWCIV2_MC,"As you may know, a filibuster in the U.S. Senate can be used to prevent legislation from coming to a vote. Of the 100 U.S. senators, how many votes are needed to end a filibuster?"
+KNOWCIV2_TF,"As you may know, a filibuster in the U.S. Senate can be used to prevent legislation from coming to a vote. Of the 100 U.S. senators, 60 votes are needed to end a filibuster."
+KNOWCIV3_MC,Which right isn’t guaranteed in the First Amendment?
+KNOWCIV3_TF,The freedom to vote is a right guaranteed in the First Amendment.
+KNOWCIV4_MC,Which of these is a power held by the president?
+KNOWCIV4_TF,Making changes to taxes is a power held by the president?
+KNOWCIV5_MC,"According to the Declaration of Independence, what is the primary purpose of government?"
+KNOWCIV5_TF,"According to the Declaration of Independence, the primary purpose of the government is to provide an organized system of rule."
+KNOWCIV6_MC,The institution of slavery was a key issue that caused which war in the United States?
+KNOWCIV6_TF,The institution of slavery was a key issue that caused the American Revolutionary War in the United States?
+COMP_ECON,"We are interested in which statement comes closer to your views, even if neither is exactly right."
+COMP_GOVT,"We are interested in which statement comes closer to your views, even if neither is exactly right."
+COMP_JURY,"We are interested in which statement comes closer to your views, even if neither is exactly right."
+ATALENTS1,"In your view, has America been successful more because of its ability to change or more because of its reliance on long-standing principles?"
+ATALENTS2,"In your view, has America been successful more because of its democratic system of government or more because of its free-market system of business?"
+ATALENTS3,"In your view, has America been successful more because of its freedoms afforded in the Constitution or more because of its ability to constrain some freedoms for the greater good?"
+DEMO_INVEST_Fed_1_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Making it easier to vote - Click to write Scale Point 1"
+DEMO_INVEST_Fed_2_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Programs that provide greater access to elected officials - Click to write Scale Point 1"
+DEMO_INVEST_Fed_3_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Civic learning programs for citizens that provide a common understanding about democracy - Click to write Scale Point 1"
+DEMO_INVEST_Fed_4_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Better general education to improve understanding of public policy issues - Click to write Scale Point 1"
+DEMO_INVEST_Fed_5_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Activities that build trust between community organization and government - Click to write Scale Point 1"
+DEMO_INVEST_Fed_6_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Charitable support for immigrants arriving in the country with very little resources - Click to write Scale Point 1"
+DEMO_INVEST_Fed_7_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Incentives for participation in jury duty - Click to write Scale Point 1"
+DEMO_INVEST_Fed_8_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Funding for public radio and television journalism - Click to write Scale Point 1"
+DEMO_INVEST_Fed_9_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Programs that bring together those with different perspectives - Click to write Scale Point 1"
+DEMO_INVEST_Fed_10_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Amount to keep for myself - Click to write Scale Point 1"
+DEMO_INVEST_State_1_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Making it easier to vote - Click to write Scale Point 1"
+DEMO_INVEST_State_2_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Programs that provide greater access to elected officials - Click to write Scale Point 1"
+DEMO_INVEST_State_3_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Civic learning programs for citizens that provide a common understanding about democracy - Click to write Scale Point 1"
+DEMO_INVEST_State_4_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Better general education to improve understanding of public policy issues - Click to write Scale Point 1"
+DEMO_INVEST_State_5_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Activities that build trust between community organization and government - Click to write Scale Point 1"
+DEMO_INVEST_State_6_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Charitable support for immigrants arriving in the country with very little resources - Click to write Scale Point 1"
+DEMO_INVEST_State_7_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Incentives for participation in jury duty - Click to write Scale Point 1"
+DEMO_INVEST_State_8_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Funding for public radio and television journalism - Click to write Scale Point 1"
+DEMO_INVEST_State_9_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Programs that bring together those with different perspectives - Click to write Scale Point 1"
+DEMO_INVEST_State_10_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Amount to keep for myself - Click to write Scale Point 1"
+DEMO_INVEST_Local_1_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Making it easier to vote - Click to write Scale Point 1"
+DEMO_INVEST_Local_2_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Programs that provide greater access to elected officials - Click to write Scale Point 1"
+DEMO_INVEST_Local_3_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Civic learning programs for citizens that provide a common understanding about democracy - Click to write Scale Point 1"
+DEMO_INVEST_Local_4_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Better general education to improve understanding of public policy issues - Click to write Scale Point 1"
+DEMO_INVEST_Local_5_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Activities that build trust between community organization and government - Click to write Scale Point 1"
+DEMO_INVEST_Local_6_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Charitable support for immigrants arriving in the country with very little resources - Click to write Scale Point 1"
+DEMO_INVEST_Local_7_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Incentives for participation in jury duty - Click to write Scale Point 1"
+DEMO_INVEST_Local_8_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Funding for public radio and television journalism - Click to write Scale Point 1"
+DEMO_INVEST_Local_9_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Programs that bring together those with different perspectives - Click to write Scale Point 1"
+DEMO_INVEST_Local_10_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Amount to keep for myself - Click to write Scale Point 1"
+PID1,"In politics today, do you consider yourself a…"
+PID2,As of today do you lean more to…
+partyid4,"Q7: Generally speaking, do you think of yourself as a..."
+Interest_1_1.0,Interest_1_1
+Interest_1_2.0,Interest_1_2
+Interest_1_3.0,Interest_1_3
+Interest_1_4.0,Interest_1_4
+DOV_PID5_WV1_WV2,
+DOV_Respect,DOV_Respect
+DOV_Trust,DOV_Trust
+DOV_Trust_2,DOV_Trust_2
+DOV_VCOMPA1,DOV_VCOMPA1
+DOV_MERIT4,DOV_MERIT4
+DOV_Dollar,DOV_Dollar
+TROUBDEMOC,TROUBDEMOC
+TROUBDEMOD,TROUBDEMOD
+TROUBDEMOE,TROUBDEMOE
+ppethm_345_1,ppethm_345_1
+ppethm_345_2,ppethm_345_2
+KNOWCIV1_MC_quota,KNOWCIV1_MC_quota
+KNOWCIV1_TF_quota,KNOWCIV1_TF_quota
+KNOWCIV2_MC_quota,KNOWCIV2_MC_quota
+KNOWCIV2_TF_quota,KNOWCIV2_TF_quota
+KNOWCIV3_MC_quota,KNOWCIV3_MC_quota
+KNOWCIV3_TF_quota,KNOWCIV3_TF_quota
+KNOWCIV4_MC_quota,KNOWCIV4_MC_quota
+KNOWCIV4_TF_quota,KNOWCIV4_TF_quota
+KNOWCIV5_MC_quota,KNOWCIV5_MC_quota
+KNOWCIV5_TF_quota,KNOWCIV5_TF_quota
+KNOWCIV6_MC_quota,KNOWCIV6_MC_quota
+KNOWCIV6_TF_quota,KNOWCIV6_TF_quota
+W2_HUMFL1,"In general, how positive (happy) or negative (unhappy) do you usually feel these days?"
+W2_HUMFL2,"Overall, to what extent do you feel the things you do in your life are worthwhile?"
+W2_HUMFL3_1,"Please read the statements below. For each one, please tell us whether the statement is not true of you at all or completely true of you. - I understand my purpose in life."
+W2_HUMFL3_2,"Please read the statements below. For each one, please tell us whether the statement is not true of you at all or completely true of you. - Even in difficult and challenging situations I always act to promote good in all circumstances."
+W2_HUMFL3_3,"Please read the statements below. For each one, please tell us whether the statement is not true of you at all or completely true of you. - I am always able to give up some happiness now for greater happiness later."
+W2_HUMFL6_1,Please read the statements below. Please tell us how often you worry about…? - Being able to meet normal monthly living expenses
+W2_HUMFL6_2,"Please read the statements below. Please tell us how often you worry about…? - Safety, food, or housing"
+W2_Fed_Respect,How much do you respect those who serve in the FEDERAL government?
+W2_State_Respect,How much do you respect those who serve in your STATE government?
+W2_Local_Respect,How much do you respect those who serve in your LOCAL government?
+W2_Media_1,"How often, if at all, do you get news or information from the following sources? - FOX News"
+W2_Media_2,"How often, if at all, do you get news or information from the following sources? - CNN or MSNBC"
+W2_Media_3,"How often, if at all, do you get news or information from the following sources? - ABC, CBS, or NBC News"
+W2_Media_4,"How often, if at all, do you get news or information from the following sources? - New York Times, Washington Post, Wall Street Journal, or USA Today"
+W2_Media_5,"How often, if at all, do you get news or information from the following sources? - Conservative online news (e.g., Breitbart, Daily Caller, Newsmax, Instapundit)"
+W2_Media_6,"How often, if at all, do you get news or information from the following sources? - Digital or online news"
+W2_Media_7,"How often, if at all, do you get news or information from the following sources? - Your local newspaper"
+W2_Media_8,"How often, if at all, do you get news or information from the following sources? - Your local TV news"
+W2_Media_9,"How often, if at all, do you get news or information from the following sources? - Public television or radio"
+W2_Media_10,"How often, if at all, do you get news or information from the following sources? - Social media, YouTube, or TikTok"
+W2_Media_11,"How often, if at all, do you get news or information from the following sources? - Newsletters or news items sent directly to you"
+W2_Interest_1_1,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - U.S. Democracy"
+W2_Interest_1_2,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - U.S. Democracy - Voting and Elections"
+W2_Interest_1_3,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - U.S. Democracy – Citizenship rights and freedoms"
+W2_Interest_1_4,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - U.S. Democracy – How to improve it"
+W2_Interest_1_5,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Energy and climate"
+W2_Interest_1_6,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Finance and investment"
+W2_Interest_1_7,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Government and public policy"
+W2_Interest_1_8,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Artificial Intelligence and technology"
+W2_Interest_1_9,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Economics and labor"
+W2_Interest_1_10,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Housing and real estate"
+W2_Interest_1_11,"There are many subjects being discussed these days, please indicate how much interest you have in gaining a deeper understanding of each of the following: - Personal health and well-being"
+W2_Fed_Trust,How much do you trust the FEDERAL government to do what is right?
+W2_State_Trust,How much do you trust your STATE government to do what is right?
+W2_Local_Trust,How much do you trust your LOCAL government to do what is right?
+W2_Qa_CONWATER_1,To what extent are you unsupportive or supportive of allowing the following entities to manage the regulation of water? - The federal government
+W2_Qa_CONWATER_2,To what extent are you unsupportive or supportive of allowing the following entities to manage the regulation of water? - Your state government
+W2_Qa_CONWATER_3,To what extent are you unsupportive or supportive of allowing the following entities to manage the regulation of water? - Your local government
+W2_Qa_CONWATER_4,To what extent are you unsupportive or supportive of allowing the following entities to manage the regulation of water? - Community organizations and/or non-profit organizations
+W2_Qa_CONWATER_5,To what extent are you unsupportive or supportive of allowing the following entities to manage the regulation of water? - Corporations
+W2_Qb_CONCYBER_1,To what extent are you unsupportive or supportive of allowing the following entities to set standards for cyber security? - The federal government
+W2_Qb_CONCYBER_2,To what extent are you unsupportive or supportive of allowing the following entities to set standards for cyber security? - Your state government
+W2_Qb_CONCYBER_3,To what extent are you unsupportive or supportive of allowing the following entities to set standards for cyber security? - Your local government
+W2_Qb_CONCYBER_4,To what extent are you unsupportive or supportive of allowing the following entities to set standards for cyber security? - Community organizations and/or non-profit organizations
+W2_Qb_CONCYBER_5,To what extent are you unsupportive or supportive of allowing the following entities to set standards for cyber security? - Corporations
+W2_Qc_CONHEALTH_1,To what extent are you unsupportive or supportive of allowing the following entities to set decisions about public health standards and protocols? - The federal government
+W2_Qc_CONHEALTH_2,To what extent are you unsupportive or supportive of allowing the following entities to set decisions about public health standards and protocols? - Your state government
+W2_Qc_CONHEALTH_3,To what extent are you unsupportive or supportive of allowing the following entities to set decisions about public health standards and protocols? - Your local government
+W2_Qc_CONHEALTH_4,To what extent are you unsupportive or supportive of allowing the following entities to set decisions about public health standards and protocols? - Community organizations and/or non-profit organizations
+W2_Qc_CONHEALTH_5,To what extent are you unsupportive or supportive of allowing the following entities to set decisions about public health standards and protocols? - Corporations
+W2_ONEWORD1a,What one word or phrase would you use to DEFINE American democracy?
+W2_ONEWORD1b,What one word or phrase would you use to DESCRIBE American voters?
+W2_ONEWORD1c,What one word or phrase would you use to DESCRIBE American government?
+W2_Hope1,"Generally speaking, on a scale from 1 to 10 where 10 is “extremely hopeful” and 1 is “extremely worried” how do you feel about the future of American democracy?"
+W2_POLEFFA1_1,Please indicate how much you agree or disagree with the statements below. - I have a good understanding of the political issues facing this country.
+W2_POLEFFA1_2,Please indicate how much you agree or disagree with the statements below. - I know more about politics than most people of my age.
+W2_POLEFFA1_3,Please indicate how much you agree or disagree with the statements below. - Public officials don’t care about what people like me think.
+W2_POLEFFA1_4,Please indicate how much you agree or disagree with the statements below. - I have access to all the information I need to participate in our democracy with confidence.
+W2CIVIL_2_1,How often do you think the following kinds of behaviors occur in America? - People saying things that are rude or impolite
+W2CIVIL_2_2,How often do you think the following kinds of behaviors occur in America? - People sharing political views that are offensive to some
+W2CIVIL_2_3,How often do you think the following kinds of behaviors occur in America? - People saying or using racial insults or slurs
+W2CIVIL_2_4,How often do you think the following kinds of behaviors occur in America? - People making statements that may contribute to creating a dangerous situation
+W2CIVIL_2_5,How often do you think the following kinds of behaviors occur in America? - People threatening the health and safety of someone else
+W2CIVIL_1,"Please consider the following behaviors and think about whether you would encourage, react negatively, or do nothing if a person close to you: - Said something rude or impolite"
+W2CIVIL_2,"Please consider the following behaviors and think about whether you would encourage, react negatively, or do nothing if a person close to you: - Shared political views that are offensive to some"
+W2CIVIL_3,"Please consider the following behaviors and think about whether you would encourage, react negatively, or do nothing if a person close to you: - Said or used a racial insult or slur"
+W2CIVIL_4,"Please consider the following behaviors and think about whether you would encourage, react negatively, or do nothing if a person close to you: - Made statements that may have contributed to creating a dangerous situation"
+W2CIVIL_5,"Please consider the following behaviors and think about whether you would encourage, react negatively, or do nothing if a person close to you: - Threatened the health and safety of someone else"
+W2_DEMPOLICYa1_1,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that ban the use of certain words in government programs"
+W2_DEMPOLICYa1_2,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that promote bail reform"
+W2_DEMPOLICYa1_3,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that make it easier to vote in elections"
+W2_DEMPOLICYa1_4,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that create job training programs for diverse communities"
+W2_DEMPOLICYa1_5,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that require gender neutral bathrooms"
+W2_DEMPOLICYa1_6,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that address racial inequality in voting districts"
+W2_DEMPOLICYa1_7,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that restrict hair styles in schools"
+W2_DEMPOLICYa1_8,"Below are a series of public issues. We would like you to tell us, in your opinion, which “policy area” best fits each issue. - Policies that prevent fraud in public benefits programs"
+W2_TROUBDEMO_1,Please indicate how much you agree or disagree with the statements below. - A time will come when patriotic Americans have to take the law into their own hands.
+W2_TROUBDEMO_2,Please indicate how much you agree or disagree with the statements below. - The main trouble with democracy is that most people don’t really know what’s best for them.
+W2_TROUBDEMO_3,Please indicate how much you agree or disagree with the statements below. - Strong leaders sometimes have to bend the rules in order to get things done.
+W2_TROUBDEMO_4,Please indicate how much you agree or disagree with the statements below. - Strong leaders sometimes have to break the rules in order to get things done.
+W2_TROUBDEMO_5,Please indicate how much you agree or disagree with the statements below. - Strong leaders sometimes have to follow the rules in order to get things done.
+W2_TROUBDEMO_6,Please indicate how much you agree or disagree with the statements below. - The United States is on the brink of a new civil war.
+W2_TROUBDEMO_7,Please indicate how much you agree or disagree with the statements below. - The United States is on the brink of a new civil war over race and ethnicity.
+W2_TROUBDEMO_8,Please indicate how much you agree or disagree with the statements below. - The United States is on the brink of a new civil war over who’s a real American.
+W2_TROUBDEMO_9,Please indicate how much you agree or disagree with the statements below. - I support the use of violence to ensure my party wins.
+W2_TROUBDEMO_10,Please indicate how much you agree or disagree with the statements below. - I support the use of violence to ensure my party wins control of congress.
+W2_TROUBDEMO_11,Please indicate how much you agree or disagree with the statements below. - I support the use of violence to ensure my party wins control of our state legislature.
+W2_TROUBDEMO_12,Please indicate how much you agree or disagree with the statements below. - I support the use of violence to ensure my party wins the presidency.
+W2DIVERSITYA_1,Please indicate how much you agree or disagree with the statements below. - The changing diversity of the United States will have a negative impact on me personally.
+W2DIVERSITYA_2,Please indicate how much you agree or disagree with the statements below. - The changing diversity of the United States will have a negative impact on the United States overall.
+W2DIVERSITYA_3,Please indicate how much you agree or disagree with the statements below. - The changing diversity of the United States will have a negative impact on America’s standing in the world.
+W2DIVERSITYB_1,Please indicate how much you agree or disagree with the statements below. - The changing diversity of the United States will have a positive impact on me personally.
+W2DIVERSITYB_2,Please indicate how much you agree or disagree with the statements below. - The changing diversity of the United States will have a positive impact on the United States overall.
+W2DIVERSITYB_3,Please indicate how much you agree or disagree with the statements below. - The changing diversity of the United States will have a positive impact on America’s standing in the world.
+W2DIVERSITY_1_val,W2DIVERSITY_1_val
+W2DIVERSITY_2_val,W2DIVERSITY_2_val
+W2RWA_1,Please indicate how much you agree or disagree with the statements below. - Our country desperately needs a mighty leader who will do what has to be done to destroy the radical new ideas that are ruining us.
+W2RWA_2,Please indicate how much you agree or disagree with the statements below. - What our country really needs is a good stiﬀ dose of law and order.
+W2RWA_3,"Please indicate how much you agree or disagree with the statements below. - We have to crack down harder on deviant groups and troublemakers, if we are going to save our moral standards and preserve law and order."
+W2RWA_4,Please indicate how much you agree or disagree with the statements below. - Our country needs more disciplined citizens who follow national leaders in unity.
+W2RWA_5,Please indicate how much you agree or disagree with the statements below. - The only way our country can get through the crisis ahead is to silence the troublemakers spreading bad ideas.
+W2_Merit_1,Please indicate how much you agree or disagree with the statements below. - I am a good judge of whether another person needs help.
+W2_Merit_2,Please indicate how much you agree or disagree with the statements below. - Everyone has it in their own power to succeed.
+W2_Merit_4,"Please indicate how much you agree or disagree with the statements below. - In general, people should be more concerned about what they could lose than what society might gain."
+W2GENRES_1,Please indicate how much you agree or disagree with this statement. - It is unfair that women seek to gain power by making men feel guilty about their position in society.
+W2GENRES_2,Please indicate how much you agree or disagree with this statement. - It irritates me when women interpret innocent acts as being sexist.
+W2GENSEXISM1,Please indicate how much you agree or disagree with this statement. - It seems that most women fail to appreciate all that men do for them.
+W2GENSEXISM2,"Please indicate how much you agree or disagree with this statement. - When women lose to men in a fair competition, they typically complain about being discriminated against."
+W2GENRES_5,Please indicate how much you agree or disagree with this statement. - Women receive less credit than they deserve for the challenges they face.
+W2ANOMIE_1,"Please indicate how much you agree or disagree with this statement. - Next to health, money is the most important thing in life."
+W2ANOMIE_2,Please indicate how much you agree or disagree with this statement. - You sometimes can't help wondering whether anything is worthwhile anymore.
+W2ANOMIE_3,"Please indicate how much you agree or disagree with this statement. - Nowadays, a person has to live pretty much for today and let tomorrow take care of itself."
+W2ANOMIE_4,Please indicate how much you agree or disagree with this statement. - It's hardly fair to bring a child into the world with the way things look for the future.
+W2ANOMIE_5,Please indicate how much you agree or disagree with this statement. - Most people don't really care what happens to the person next to them.
+W2_WRTA_1,Please indicate how much you agree or disagree with the statements below. - I resent any special considerations that African Americans receive because it’s unfair to other Americans.
+W2_WRTA_2,"Please indicate how much you agree or disagree with the statements below. - For African Americans to succeed, they need to stop using past racism and slavery as excuses."
+W2_WRTA_3,Please indicate how much you agree or disagree with the statements below. - Special considerations for African Americans place me at an unfair disadvantage because I have done nothing to harm them.
+W2_WRTA_4,Please indicate how much you agree or disagree with the statements below. - African Americans bring up race only when they need to make an excuse for their failure.
+W2_AARTW_1,Please indicate how much you agree or disagree with the statements below. - I resent when Whites deny the existence of racial discrimination.
+W2_AARTW_2,Please indicate how much you agree or disagree with the statements below. - Whites get away with offenses that African Americans would never get away with.
+W2_AARTW_3,Please indicate how much you agree or disagree with the statements below. - Whites do not go to great lengths to understand the problems African Americans face.
+W2_AARTW_4,"Please indicate how much you agree or disagree with the statements below. - Even when African Americans work hard to succeed, Whites still view them in lesser terms."
+W2_WD2_1,"There are many kinds of groups in the world: men and women, ethnic and religious groups, nationalities, political factions. How much do you agree or disagree with each idea about groups in general? - An ideal society requires some groups to be on top and others to be on the bottom."
+W2_WD2_2,"There are many kinds of groups in the world: men and women, ethnic and religious groups, nationalities, political factions. How much do you agree or disagree with each idea about groups in general? - Some groups of people are simply inferior to other groups."
+W2_WD2_3,"There are many kinds of groups in the world: men and women, ethnic and religious groups, nationalities, political factions. How much do you agree or disagree with each idea about groups in general? - No one group should be dominant in society."
+W2_WD2_4,"There are many kinds of groups in the world: men and women, ethnic and religious groups, nationalities, political factions. How much do you agree or disagree with each idea about groups in general? - Groups at the bottom are always just as deserving as groups at the top."
+W2RAPATHY_1,Please indicate the extent you agree or disagree with the following statements - I’m tired of hearing people talk about racial problems in the U.S. today.
+W2RAPATHY_2,Please indicate the extent you agree or disagree with the following statements - Whites are generally treated better than other groups in American society today.
+W2RAPATHY_3,"Please indicate the extent you agree or disagree with the following statements - Maybe some racial minority groups do experience unfair treatment, but that’s no business of mine."
+W2_WD3_1,Please indicate how much you agree or disagree with the statements below. - The American way of life is under attack.
+W2_WD3_2,Please indicate how much you agree or disagree with the statements below. - Things are really out of control in the United States.
+W2_WD3_3,Please indicate how much you agree or disagree with the statements below. - The United States of the past is a much better place than the United States of the future.
+W2_WD3_4,Please indicate how much you agree or disagree with the statements below. - Society is set up so that people usually get what they deserve.
+W2_WD3_5,Please indicate how much you agree or disagree with the statements below. - Everyone has a fair shot at wealth and happiness if they play by the rules.
+W2_WD3_6,Please indicate how much you agree or disagree with the statements below. - We must work hard to defend and preserve the way things are.
+W2_WD3_7,Please indicate how much you agree or disagree with the statements below. - The United States is changing too fast.
+W2CHAOS_1,Please indicate how much you agree or disagree with the statements below. - Our ability to live together as one would be fine if we didn’t have a government.
+W2CHAOS_2,Please indicate how much you agree or disagree with the statements below. - I often think we need a disaster to wipe out most of humanity so that a small group of people can start all over.
+W2CHAOS_3,"Please indicate how much you agree or disagree with the statements below. - Honestly, I think our current institutions of government should be burned to the ground."
+W2CHAOS_4,Please indicate how much you agree or disagree with the statements below. - I think that we should allow our current government institutions to fall apart.
+W2CHAOS_5,"Please indicate how much you agree or disagree with the statements below. - We cannot fix the problems in our government, we need to tear them down and start over."
+W2_KNOWCIV1_MC,"In the case of a tied vote in the U.S. Senate, is the deciding vote cast by…"
+W2_KNOWCIV1_TF,"In the case of a tied vote in the U.S. Senate, the deciding vote is cast by the vice president."
+W2_KNOWCIV2_MC,"As you may know, a filibuster in the U.S. Senate can be used to prevent legislation from coming to a vote. Of the 100 U.S. senators, how many votes are needed to end a filibuster?"
+W2_KNOWCIV2_TF,"As you may know, a filibuster in the U.S. Senate can be used to prevent legislation from coming to a vote. Of the 100 U.S. senators, 60 votes are needed to end a filibuster."
+W2_KNOWCIV3_MC,Which right isn’t guaranteed in the First Amendment?
+W2_KNOWCIV3_TF,The freedom to vote is a right guaranteed in the First Amendment.
+W2_KNOWCIV4_MC,Which of these is a power held by the president?
+W2_KNOWCIV4_TF,Making changes to taxes is a power held by the president?
+W2_KNOWCIV5_MC,"According to the Declaration of Independence, what is the primary purpose of government?"
+W2_KNOWCIV5_TF,"According to the Declaration of Independence, the primary purpose of the government is to provide an organized system of rule."
+W2_KNOWCIV6_MC,The institution of slavery was a key issue that caused which war in the United States?
+W2_KNOWCIV6_TF,The institution of slavery was a key issue that caused the American Revolutionary War in the United States?
+W2_COMP_ECON,"We are interested in which statement comes closer to your views, even if neither is exactly right."
+W2_COMP_GOVT,"We are interested in which statement comes closer to your views, even if neither is exactly right."
+W2_COMP_JURY,"We are interested in which statement comes closer to your views, even if neither is exactly right."
+W2_ATALENTS1,"In your view, has America been successful more because of its ability to change or more because of its reliance on long-standing principles?"
+W2_ATALENTS2,"In your view, has America been successful more because of its democratic system of government or more because of its free-market system of business?"
+W2_ATALENTS3,"In your view, has America been successful more because of its freedoms afforded in the Constitution or more because of its ability to constrain some freedoms for the greater good?"
+W2_DEMO_INVEST_Fed_1_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Making it easier to vote - Click to write Scale Point 1"
+W2_DEMO_INVEST_Fed_2_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Programs that provide greater access to elected officials - Click to write Scale Point 1"
+W2_DEMO_INVEST_Fed_3_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Civic learning programs for citizens that provide a common understanding about democracy - Click to write Scale Point 1"
+W2_DEMO_INVEST_Fed_4_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Better general education to improve understanding of public policy issues - Click to write Scale Point 1"
+W2_DEMO_INVEST_Fed_5_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Activities that build trust between community organization and government - Click to write Scale Point 1"
+W2_DEMO_INVEST_Fed_6_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Charitable support for immigrants arriving in the country with very little resources - Click to write Scale Point 1"
+W2_DEMO_INVEST_Fed_7_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Incentives for participation in jury duty - Click to write Scale Point 1"
+W2_DEMO_INVEST_Fed_8_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Funding for public radio and television journalism - Click to write Scale Point 1"
+W2_DEMO_INVEST_Fed_9_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Programs that bring together those with different perspectives - Click to write Scale Point 1"
+W2_DEMO_INVEST_Fed_10_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in the United States.
+
+
+
+How would you allocate your $100 to the different items that support democracy for the federal government? (the total amount must sum to $100): The total amount must sum to $100 - Amount to keep for myself - Click to write Scale Point 1"
+W2_DEMO_INVEST_State_1_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Making it easier to vote - Click to write Scale Point 1"
+W2_DEMO_INVEST_State_2_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Programs that provide greater access to elected officials - Click to write Scale Point 1"
+W2_DEMO_INVEST_State_3_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Civic learning programs for citizens that provide a common understanding about democracy - Click to write Scale Point 1"
+W2_DEMO_INVEST_State_4_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Better general education to improve understanding of public policy issues - Click to write Scale Point 1"
+W2_DEMO_INVEST_State_5_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Activities that build trust between community organization and government - Click to write Scale Point 1"
+W2_DEMO_INVEST_State_6_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Charitable support for immigrants arriving in the country with very little resources - Click to write Scale Point 1"
+W2_DEMO_INVEST_State_7_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Incentives for participation in jury duty - Click to write Scale Point 1"
+W2_DEMO_INVEST_State_8_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Funding for public radio and television journalism - Click to write Scale Point 1"
+W2_DEMO_INVEST_State_9_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Programs that bring together those with different perspectives - Click to write Scale Point 1"
+W2_DEMO_INVEST_State_10_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your state.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your state government? (the total amount must sum to $100): The total amount must sum to $100 - Amount to keep for myself - Click to write Scale Point 1"
+W2_DEMO_INVEST_Local_1_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Making it easier to vote - Click to write Scale Point 1"
+W2_DEMO_INVEST_Local_2_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Programs that provide greater access to elected officials - Click to write Scale Point 1"
+W2_DEMO_INVEST_Local_3_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Civic learning programs for citizens that provide a common understanding about democracy - Click to write Scale Point 1"
+W2_DEMO_INVEST_Local_4_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Better general education to improve understanding of public policy issues - Click to write Scale Point 1"
+W2_DEMO_INVEST_Local_5_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Activities that build trust between community organization and government - Click to write Scale Point 1"
+W2_DEMO_INVEST_Local_6_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Charitable support for immigrants arriving in the country with very little resources - Click to write Scale Point 1"
+W2_DEMO_INVEST_Local_7_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Incentives for participation in jury duty - Click to write Scale Point 1"
+W2_DEMO_INVEST_Local_8_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Funding for public radio and television journalism - Click to write Scale Point 1"
+W2_DEMO_INVEST_Local_9_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Programs that bring together those with different perspectives - Click to write Scale Point 1"
+W2_DEMO_INVEST_Local_10_1,"Assume that every eligible voter in the U.S. was provided $100 “democracy policy dollars” to invest in strengthening democracy in your local community.  
+
+
+
+How would you allocate your $100 to the different items that support democracy for your local government? (the total amount must sum to $100): The total amount must sum to $100 - Amount to keep for myself - Click to write Scale Point 1"
+W2DEMDOLQ1_1,"In the prior set of items, you indicated that you would keep some amount of the $100 for yourself.
+
+
+
+Why did you choose to keep some of the funds for yourself? (Check all that apply) - Selected Choice You need the money"
+W2DEMDOLQ1_2,"In the prior set of items, you indicated that you would keep some amount of the $100 for yourself.
+
+
+
+Why did you choose to keep some of the funds for yourself? (Check all that apply) - Selected Choice You feel that you deserve some money for yourself"
+W2DEMDOLQ1_3,"In the prior set of items, you indicated that you would keep some amount of the $100 for yourself.
+
+
+
+Why did you choose to keep some of the funds for yourself? (Check all that apply) - Selected Choice You do not feel government should have all of the funding"
+W2DEMDOLQ1_4,"In the prior set of items, you indicated that you would keep some amount of the $100 for yourself.
+
+
+
+Why did you choose to keep some of the funds for yourself? (Check all that apply) - Selected Choice You would want to hold some funds for other activities"
+W2DEMDOLQ1_5,"In the prior set of items, you indicated that you would keep some amount of the $100 for yourself.
+
+
+
+Why did you choose to keep some of the funds for yourself? (Check all that apply) - Selected Choice You were just having fun with the exercise"
+W2DEMDOLQ1_6,"In the prior set of items, you indicated that you would keep some amount of the $100 for yourself.
+
+
+
+Why did you choose to keep some of the funds for yourself? (Check all that apply) - Selected Choice Something else"
+W2DEMDOLQ1_6_TEXT,"In the prior set of items, you indicated that you would keep some amount of the $100 for yourself.
+
+
+
+Why did you choose to keep some of the funds for yourself? (Check all that apply) - Something else - Text"
+W2_PID1,"In politics today, do you consider yourself a…"
+W2_PID2,As of today do you lean more to…
+W2_DOV_PID5,DOV_PID5
+DOV_PID5,DOV_PID5 combined from wave 1 and wave 2
+W2AFFDPOL_1,Please indicate how much you agree or disagree with the statements below. - I feel as though Republicans are very different from Democrats.
+W2AFFDPOL_2,Please indicate how much you agree or disagree with the statements below. - Republicans live in a different world from those of us siding with Democrats.
+W2AFFDPOL_3,Please indicate how much you agree or disagree with the statements below. - Republicans act in ways that those of us siding with Democrats could never understand.
+W2AFFDPOL_4,"Please indicate how much you agree or disagree with the statements below. - As someone who sides with Democrats, I would not want to be friends with someone who was a Republican."
+W2AFFDPOL_5,"Please indicate how much you agree or disagree with the statements below. - If I found out a friend of mine was a Republican, I would want to stop spending time with them."
+W2AFFDPOL_6,"Please indicate how much you agree or disagree with the statements below. - Although I do not agree with their political views, there are people I like who are Republicans."
+W2AFFDPOL_7,Please indicate how much you agree or disagree with the statements below. - My identity as someone who sides with Democrats is connected to my core moral beliefs.
+W2AFFDPOL_8,Please indicate how much you agree or disagree with the statements below. - My identity as someone who sides with Democrats reflects my beliefs about the difference between right and wrong.
+W2AFFDPOL_9,Please indicate how much you agree or disagree with the statements below. - My identity as someone who sides Democrats is rooted in moral principles.
+W2AFFRPOL_1,Please indicate how much you agree or disagree with the statements below. - I feel as though Democrats are very different from Republicans.
+W2AFFRPOL_2,Please indicate how much you agree or disagree with the statements below. - Democrats live in a different world from those of us who side with Republicans.
+W2AFFRPOL_3,Please indicate how much you agree or disagree with the statements below. - Democrats act in ways that those of us siding with Republicans could never understand.
+W2AFFRPOL_4,"Please indicate how much you agree or disagree with the statements below. - As someone who sides with Republicans, I would not want to be friends with someone who was a Democrat."
+W2AFFRPOL_5,"Please indicate how much you agree or disagree with the statements below. - If I found out a friend of mine was a Democrat, I would want to stop spending time with them."
+W2AFFRPOL_6,"Please indicate how much you agree or disagree with the statements below. - Although I do not agree with their political views, there are people I like who are Democrats."
+W2AFFRPOL_7,Please indicate how much you agree or disagree with the statements below. - My identity as someone who sides with Republicans is connected to my core moral beliefs.
+W2AFFRPOL_8,Please indicate how much you agree or disagree with the statements below. - My identity as someone who sides with Republicans reflects my beliefs about the difference between right and wrong.
+W2AFFRPOL_9,Please indicate how much you agree or disagree with the statements below. - My identity as someone who sides with Republicans is rooted in moral principles.
+W2_DEMODOLQ2,Since you decided to keep some amount of “democracy dollars” can you say in a few words what you would do with the amount you allocated for yourself?
+W2_DOV_Respect,DOV_Respect
+W2_DOV_Trust,DOV_Trust
+W2_DOV_Trust_2,DOV_Trust_2
+W2_DOV_Dollar,DOV_Dollar
+W2_Interest_1_1.2,Interest_1_1
+W2_Interest_1_2.2,Interest_1_2
+W2_Interest_1_3.2,Interest_1_3
+W2_Interest_1_4.2,Interest_1_4
+W2_TROUBDEMOC,TROUBDEMOC
+W2_TROUBDEMOD,TROUBDEMOD
+W2_TROUBDEMOE,TROUBDEMOE
+W2_MERIT4_val,MERIT4_val
+W2_ppethm_345_1,ppethm_345_1
+W2_ppethm_345_2,ppethm_345_2
+W2_KNOWCIV1_MC_quota,KNOWCIV1_MC_quota
+W2_KNOWCIV1_TF_quota,KNOWCIV1_TF_quota
+W2_KNOWCIV2_MC_quota,KNOWCIV2_MC_quota
+W2_KNOWCIV2_TF_quota,KNOWCIV2_TF_quota
+W2_KNOWCIV3_MC_quota,KNOWCIV3_MC_quota
+W2_KNOWCIV3_TF_quota,KNOWCIV3_TF_quota
+W2_KNOWCIV4_MC_quota,KNOWCIV4_MC_quota
+W2_KNOWCIV4_TF_quota,KNOWCIV4_TF_quota
+W2_KNOWCIV5_MC_quota,KNOWCIV5_MC_quota
+W2_KNOWCIV5_TF_quota,KNOWCIV5_TF_quota
+W2_KNOWCIV6_MC_quota,KNOWCIV6_MC_quota
+W2_KNOWCIV6_TF_quota,KNOWCIV6_TF_quota
+W3_HUMFL1,"In general, how positive (happy) or negative (unhappy) do you usually feel these days?"
+W3_HUMFL2,"Overall, to what extent do you feel the things you do in your life are worthwhile?"
+W3_HUMFL3_1,"Please read the statements below. For each one, please tell us whether the statement is completely true of you or not true of you at all. - I understand my purpose in life"
+W3_HUMFL3_2,"Please read the statements below. For each one, please tell us whether the statement is completely true of you or not true of you at all. - Even in difficult and challenging situations I always act to promote good in all circumstances"
+W3_HUMFL3_3,"Please read the statements below. For each one, please tell us whether the statement is completely true of you or not true of you at all. - I am always able to give up some happiness now for greater happiness later"
+W3_HUMFL6_1,Please read the statements below. Please tell us how often you worry about… - Being able to meet normal monthly living expenses
+W3_HUMFL6_2,"Please read the statements below. Please tell us how often you worry about… - Safety, food, or housing"
+W3_Hope1,"Generally speaking, on a scale from 1 to 10 where 10 is “extremely hopeful” and 1 is “extremely worried”, how do you feel about the future of American democracy?"
+W3_Media_1,"How often, if at all, do you get news or information from the following sources? - FOX News"
+W3_Media_2,"How often, if at all, do you get news or information from the following sources? - CNN or MSNBC"
+W3_Media_3,"How often, if at all, do you get news or information from the following sources? - ABC, CBS, or NBC News"
+W3_Media_4,"How often, if at all, do you get news or information from the following sources? - New York Times, Washington Post, Wall Street Journal, or USA Today"
+W3_Media_5,"How often, if at all, do you get news or information from the following sources? - Your local newspaper"
+W3_Media_6,"How often, if at all, do you get news or information from the following sources? - Your local TV news"
+W3_Media_7,"How often, if at all, do you get news or information from the following sources? - Public television or radio"
+W3_ONEWORD1a,What one word or phrase would you use to DEFINE American democracy?
+W3_ONEWORD1b,What one word or phrase would you use to DESCRIBE American voters?
+W3_ONEWORD1c,What one word or phrase would you use to DESCRIBE American government?
+W3_Fed_Respect,How much do you respect those who serve in the FEDERAL government?
+W3_State_Respect,How much do you respect those who serve in your STATE government?
+W3_Local_Respect,How much do you respect those who serve in your LOCAL government?
+W3_Fed_Trust,How much do you trust the FEDERAL government to do what is right?
+W3_State_Trust,How much do you trust your STATE government to do what is right?
+W3_Local_Trust,How much do you trust your LOCAL government to do what is right?
+W3_POLEFFA1_1,Please indicate how much you agree or disagree with the statements below. - Public officials don’t care about what people like me think
+W3_POLEFFA1_2,Please indicate how much you agree or disagree with the statements below. - I have access to all the information I need to participate in our democracy with confidence
+W3_POLINT_BASE,How much interest would you say you have in government and politics?
+W3_POLINT_LMORE,How much interest would you say you have in learning more about government and politics?
+W3_POLINT_PART,How much interest would you say you have in participating more in government and politics?
+W3_POLINT_INFO,How much interest would you say you have in receiving regular information reports from subject matter experts about government and politics?
+W3_UDEMOCA_1,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - Government narrows the gap between the rich and the poor.
+W3_UDEMOCA_2,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - People choose the government leaders in free and fair elections.
+W3_UDEMOCA_3,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - Government does not waste any public money.
+W3_UDEMOCA_4,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - People are free to express their political views without punishment from the government.
+W3_UDEMOCB_1,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - Elected representatives have oversight over the government.
+W3_UDEMOCB_2,"Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - Basic necessities, like food, clothes and shelter are provided for all."
+W3_UDEMOCB_3,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - People are free to organize political groups.
+W3_UDEMOCB_4,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - Government provides the public with quality public services.
+W3_UDEMOCC_1,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - Government ensures law and order.
+W3_UDEMOCC_2,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - The media are free to criticize the government.
+W3_UDEMOCC_3,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - Government ensures job opportunities for all.
+W3_UDEMOCC_4,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - Multiple political parties compete fairly in elections.
+W3_UDEMOCD_1,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - People have the freedom to take part in protests and demonstrations.
+W3_UDEMOCD_2,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - Politics is free of corruption.
+W3_UDEMOCD_3,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - The courts protect the ordinary people from the abuse of government power.
+W3_UDEMOCD_4,Below is a list of different attributes for American democracy. Please indicate how important each one is for your own thoughts about democracy. - People receive public assistance if they are unable to work.
+W3_Fed_Servants_1,"Thinking about the people who work for the federal government, please indicate how much you agree or disagree with the statements below. - Federal government employees are mostly incompetent at their jobs."
+W3_Fed_Servants_2,"Thinking about the people who work for the federal government, please indicate how much you agree or disagree with the statements below. - I believe that most federal government employees are committed to helping people like me."
+W3_Fed_Servants_3,"Thinking about the people who work for the federal government, please indicate how much you agree or disagree with the statements below. - Newly elected leaders should have the power to replace federal government employees when they officially take office."
+W3_Fed_Servants_4,"Thinking about the people who work for the federal government, please indicate how much you agree or disagree with the statements below. - Offering “thanks” to federal government employees for their public service helps democracy."
+W3_State_Servants_1,"Thinking about the people who work for your state government, please indicate how much you agree or disagree with the statements below. - State government employees are mostly incompetent at their jobs."
+W3_State_Servants_2,"Thinking about the people who work for your state government, please indicate how much you agree or disagree with the statements below. - I believe that most state government employees are committed to helping people like me."
+W3_State_Servants_3,"Thinking about the people who work for your state government, please indicate how much you agree or disagree with the statements below. - Newly elected leaders should have the power to replace state government employees when they officially take office."
+W3_State_Servants_4,"Thinking about the people who work for your state government, please indicate how much you agree or disagree with the statements below. - Offering “thanks” to state government employees for their public service helps democracy."
+W3_Local_Servants_1,"Thinking about the people who work for your local government, please indicate how much you agree or disagree with the statements below. - Local government employees are mostly incompetent at their jobs."
+W3_Local_Servants_2,"Thinking about the people who work for your local government, please indicate how much you agree or disagree with the statements below. - I believe that most local government employees are committed to helping people like me."
+W3_Local_Servants_3,"Thinking about the people who work for your local government, please indicate how much you agree or disagree with the statements below. - Newly elected leaders should have the power to replace local government employees when they officially take office."
+W3_Local_Servants_4,"Thinking about the people who work for your local government, please indicate how much you agree or disagree with the statements below. - Offering “thanks” to local government employees for their public service helps democracy."
+W3_ISSUEA_1,"In your opinion, how helpful are each of the following in helping you to better understand political issues? - Local organizations"
+W3_ISSUEA_2,"In your opinion, how helpful are each of the following in helping you to better understand political issues? - Religious or faith communities"
+W3_ISSUEA_3,"In your opinion, how helpful are each of the following in helping you to better understand political issues? - Professional experiences or workplace discussions"
+W3_ISSUEA_4,"In your opinion, how helpful are each of the following in helping you to better understand political issues? - Friend and family discussions"
+W3_ISSUEA_5,"In your opinion, how helpful are each of the following in helping you to better understand political issues? - Online communities and social media influencers"
+W3_ISSUEB_1,"In your opinion, how helpful are each of the following in helping you to better understand political issues? - Reports by experts at colleges and universities"
+W3_ISSUEB_2,"In your opinion, how helpful are each of the following in helping you to better understand political issues? - Statistical reports that provide facts about issues"
+W3_ISSUEB_3,"In your opinion, how helpful are each of the following in helping you to better understand political issues? - Books and printed information"
+W3_ISSUEB_4,"In your opinion, how helpful are each of the following in helping you to better understand political issues? - Barbershops/beauty salons"
+W3_ISSUEB_5,"In your opinion, how helpful are each of the following in helping you to better understand political issues? - Public opinion polling data"
+W3_DISCUSS_1,"When it comes to political conversations, how often do you experience the following: - Feeling the need to opt out of political conversations to avoid conflict or stress"
+W3_DISCUSS_2,"When it comes to political conversations, how often do you experience the following: - Productive conversations with people who hold different views"
+W3_DISCUSS_3,"When it comes to political conversations, how often do you experience the following: - Feeling pressure to take a side on political issues"
+W3_DISCUSS_4,"When it comes to political conversations, how often do you experience the following: - Openly admitting that you don’t know the facts about political topics"
+W3_COMMUNITY_1,"In your community, how easy or difficult is it to: - Keep friendships with people despite political disagreements"
+W3_COMMUNITY_2,"In your community, how easy or difficult is it to: - Find spaces or groups where political differences are discussed respectfully"
+W3_COMMUNITY_3,"In your community, how easy or difficult is it to: - Participate in discussions focused on specific local issues"
+W3_DSTRONG_1_1,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - The U.S. President was elected based on the popular vote and not the electoral college."
+W3_DSTRONG_1_2,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - The U.S. provided guaranteed minimum income for all citizens."
+W3_DSTRONG_1_3,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - It was easier for 3rd-party and independent candidates to run for office."
+W3_DSTRONG_1_4,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - Members of U.S. Congress (House and Senate) had mandatory term limits."
+W3_DSTRONG_1_5,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - Justices on the U.S. Supreme Court did not have lifetime appointments."
+W3_DSTRONG_2_1,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - Citizens are automatically registered to vote when they turn 18."
+W3_DSTRONG_2_2,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - Election day was made a national holiday."
+W3_DSTRONG_2_3,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - Local experts held “office hours” to help people understand government decisions."
+W3_DSTRONG_2_4,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - More U.S. territories became states."
+W3_DSTRONG_2_5,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - The U.S. banned voting by mail."
+W3_DSTRONG_2_6,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - There was a standard, non-partisan process for drawing election district maps."
+W3_DSTRONG_3_1,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - Schools required civic education about how government works."
+W3_DSTRONG_3_2,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - There was mandatory public service for young people."
+W3_DSTRONG_3_3,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - People stopped focusing on the racial injustices in America’s history."
+W3_DSTRONG_3_4,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - There were more policy proposals directly from ordinary citizens."
+W3_DSTRONG_4_1,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - There was less regulation of social media."
+W3_DSTRONG_4_2,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - Corporations were banned from making campaign contributions."
+W3_DSTRONG_4_3,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - There were harsher penalties for political protesters who disrupt events."
+W3_DSTRONG_4_4,"In your opinion, how much STRONGER or WEAKER would American democracy become if: - A free college education was provided to every citizen."
+W3_CITZASSA1,A Citizens’ Assembly consists of a group of randomly selected members of the public who come together to participate in guided discussions and make policy recommendations. Do you think this is:
+W3_CITZASSA2,A Citizens’ Assembly consists of a group of 25 randomly selected members of the public who come together to participate in guided discussions and make policy recommendations. Do you think this is:
+W3_CITZASSA3,A Citizens’ Assembly consists of a group of randomly selected members of the public – selected by the government – who come together to participate in guided discussions and make policy recommendations. Do you think this is:
+W3_CITZASSA4,A Citizens’ Assembly consists of a group of randomly selected members of the public who volunteer to participate in guided discussions and make policy recommendations. Do you think this is:
+W3_CITZASSA5,A Citizens’ Assembly consists of a group of 25 randomly selected members of the public – selected by the government – who come together to participate in guided discussions and make policy recommendations. Do you think this is:
+W3_CITZTOPICS_1,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - American democracy and civic engagement"
+W3_CITZTOPICS_2,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - Energy and climate"
+W3_CITZTOPICS_3,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - Finance and investment"
+W3_CITZTOPICS_4,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - Government and public policy"
+W3_CITZTOPICS_5,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - Artificial Intelligence and technology"
+W3_CITZTOPICS_6,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - Economics and labor"
+W3_CITZTOPICS_7,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - Housing and real estate"
+W3_CITZTOPICS_8,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - Personal health and well-being"
+W3_CITZTOPICSOPEN,Are there any other topics you think a Citizen’s Assembly should prioritize?
+W3_CITZFOCUS_1,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - The role of government in solving public problems"
+W3_CITZFOCUS_2,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - Educating children and young adults"
+W3_CITZFOCUS_3,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - Guaranteeing employment, especially for the unhoused and formerly incarcerated"
+W3_CITZFOCUS_4,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - Making sure elections are fair and transparent"
+W3_CITZFOCUS_5,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - Keeping people and communities safe"
+W3_CITZFOCUS_6,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+Below is a list of topics that a Citizen’s Assembly could discuss. How much of a priority do you think each topic should be for a discussion: - Protecting the environment"
+W3_CITZASS2_1,"In addition to randomly selected participants, how much better or worse would the Citizen’s Assembly meeting become if it included: - Local and state elected officials"
+W3_CITZASS2_2,"In addition to randomly selected participants, how much better or worse would the Citizen’s Assembly meeting become if it included: - Community leaders"
+W3_CITZASS2_3,"In addition to randomly selected participants, how much better or worse would the Citizen’s Assembly meeting become if it included: - Local and state business owners"
+W3_CITZASS2_4,"In addition to randomly selected participants, how much better or worse would the Citizen’s Assembly meeting become if it included: - Judges and legal experts"
+W3_CITZASS2_5,"In addition to randomly selected participants, how much better or worse would the Citizen’s Assembly meeting become if it included: - Academic experts from colleges and universities"
+W3_TALKWITHA,"If you could sit down and have a conversation about government and politics with any one person in the world, regardless of their background or expertise, who would it be?"
+W3_TALKWITHB,"If you could sit down and have a conversation about government and politics with any one person in the world, regardless of their background or expertise, who would it be? (Please select only one). - Selected Choice"
+W3_TALKWITHB_10_TEXT,"If you could sit down and have a conversation about government and politics with any one person in the world, regardless of their background or expertise, who would it be? (Please select only one). - Someone else (Please write in) - Text"
+W3_CITASSEXPA,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. 
+
+
+
+If you were asked to take part in such an assembly, how likely is it that you would participate?"
+W3_CITASSEXPB,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. Participants are provided with compensation for their time and expenses.
+
+
+
+If you were asked to take part in such an assembly, how likely is it that you would participate?"
+W3_CITASSEXPC,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. Participants are provided with a $25 cash amount for their time and expenses.
+
+
+
+If you were asked to take part in such an assembly, how likely is it that you would participate?"
+W3_CITASSEXPD,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. Participants are provided with a $2,000 [taxable] cash amount for their time and expenses.
+
+
+
+If you were asked to take part in such an assembly, how likely is it that you would participate?"
+W3_CITASSEXPE,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. Participants are provided with a $2,000 [non-taxable] cash amount for their time and expenses.
+
+
+
+If you were asked to take part in such an assembly, how likely is it that you would participate?"
+W3_CITASSEXPF,"Again, a Citizens’ Assembly is made up of randomly selected people who discuss a particular topic of relevance to society and politics. Participants are provided with a $2,000 income tax credit for their time and expenses.
+
+
+
+If you were asked to take part in such an assembly, how likely is it that you would participate?"
+W3_FOREBEAR_1,How difficult or easy is it for you to do each of the following: - Remain calm when others are rude to you.
+W3_FOREBEAR_2,How difficult or easy is it for you to do each of the following: - Listen to others’ opinions when you disagree with them.
+W3_FOREBEAR_3,How difficult or easy is it for you to do each of the following: - Overlook the mistakes that others make.
+W3_FOREBEAR_4,How difficult or easy is it for you to do each of the following: - Avoid defending yourself immediately when others place blame on you.
+W3_FOREBEAR_5,How difficult or easy is it for you to do each of the following: - Accept losing when you believe others do not deserve to win.
+W3_ELECTUS_1,How much do you agree or disagree with each of the following statements about elections in the United States? - Votes are counted fairly in the United States
+W3_ELECTUS_2,How much do you agree or disagree with each of the following statements about elections in the United States? - United States (Federal) Election officials are fair
+W3_ELECTUS_3,"How much do you agree or disagree with each of the following statements about elections in the United States? - In the United States, rich people buy elections"
+W3_ELECTUS_4,How much do you agree or disagree with each of the following statements about elections in the United States? - In the United States voters are inundated with false information about candidates
+W3_ELECTUS_5,How much do you agree or disagree with each of the following statements about elections in the United States? - Voters are offered a genuine choice in United States elections
+W3_ELECTST_1,How much do you agree or disagree with each of the following statements about elections in your state? - Votes are counted fairly in my state
+W3_ELECTST_2,How much do you agree or disagree with each of the following statements about elections in your state? - My state’s election officials are fair
+W3_ELECTST_3,"How much do you agree or disagree with each of the following statements about elections in your state? - In my state, rich people buy elections"
+W3_ELECTST_4,How much do you agree or disagree with each of the following statements about elections in your state? - In my state voters are inundated with false information about candidates
+W3_ELECTST_5,How much do you agree or disagree with each of the following statements about elections in your state? - Voters are offered a genuine choice in my state’s elections
+W3_ELECTLC_1,How much do you agree or disagree with each of the following statements about elections in your local area? - Votes are counted fairly in my local area
+W3_ELECTLC_2,How much do you agree or disagree with each of the following statements about elections in your local area? - My local area’s election officials are fair
+W3_ELECTLC_3,"How much do you agree or disagree with each of the following statements about elections in your local area? - In my local area, rich people buy elections"
+W3_ELECTLC_4,How much do you agree or disagree with each of the following statements about elections in your local area? - In my local area voters are inundated with false information about candidates
+W3_ELECTLC_5,How much do you agree or disagree with each of the following statements about elections in your local area? - Voters are offered a genuine choice in my local area’s elections
+W3_WRTA_1,Please indicate how much you agree or disagree with the statements below. - I resent any special considerations that African Americans receive because it’s unfair to other Americans.
+W3_WRTA_2,"Please indicate how much you agree or disagree with the statements below. - For African Americans to succeed, they need to stop using past racism and slavery as excuses."
+W3_WRTA_3,Please indicate how much you agree or disagree with the statements below. - Special considerations for African Americans place me at an unfair disadvantage because I have done nothing to harm them.
+W3_WRTA_4,Please indicate how much you agree or disagree with the statements below. - African Americans bring up race only when they need to make an excuse for their failure.
+W3_AARTW_1,Please indicate how much you agree or disagree with the statements below. - I resent when Whites deny the existence of racial discrimination.
+W3_AARTW_2,Please indicate how much you agree or disagree with the statements below. - Whites get away with offenses that African Americans would never get away with.
+W3_AARTW_3,Please indicate how much you agree or disagree with the statements below. - Whites do not go to great lengths to understand the problems African Americans face.
+W3_AARTW_4,"Please indicate how much you agree or disagree with the statements below. - Even when African Americans work hard to succeed, Whites still view them in lesser terms."
+W3_PERIOD_1,"Here are some decades in the past. Based on what you believe please indicate whether you feel each period was better than, worse than, or about the same as today, all things considered. - The 1940s"
+W3_PERIOD_2,"Here are some decades in the past. Based on what you believe please indicate whether you feel each period was better than, worse than, or about the same as today, all things considered. - The 1950s"
+W3_PERIOD_3,"Here are some decades in the past. Based on what you believe please indicate whether you feel each period was better than, worse than, or about the same as today, all things considered. - The 1960s"
+W3_PERIOD_4,"Here are some decades in the past. Based on what you believe please indicate whether you feel each period was better than, worse than, or about the same as today, all things considered. - The 1970s"
+W3_PERIOD_5,"Here are some decades in the past. Based on what you believe please indicate whether you feel each period was better than, worse than, or about the same as today, all things considered. - The 1980s"
+W3_PERIOD_6,"Here are some decades in the past. Based on what you believe please indicate whether you feel each period was better than, worse than, or about the same as today, all things considered. - The 1990s"
+W3_PERIOD_7,"Here are some decades in the past. Based on what you believe please indicate whether you feel each period was better than, worse than, or about the same as today, all things considered. - The 2000s"
+W3_PERIOD_8,"Here are some decades in the past. Based on what you believe please indicate whether you feel each period was better than, worse than, or about the same as today, all things considered. - The 2010s"
+W3_MERIT5a,"Which of the following, if either, do you think is a bigger problem with the federal government?"
+W3_MERIT5b,"Which of the following, if either, do you think is a bigger problem with your state’s government?"
+W3_MERIT5c,"Which of the following, if either, do you think is a bigger problem with your local government?"
+W3_MERIT5d,"Which of the following, if either, do you think is a bigger problem with the Democratic Party?"
+W3_MERIT5e,"Which of the following, if either, do you think is a bigger problem with the Republican Party?"
+W3_IDEO,"In general, how would you describe your political views? Are you …"
+W3_AFFLPOL_1,Please indicate how much you agree or disagree with the statements below. - I feel as though Conservatives are very different from Liberals.
+W3_AFFLPOL_2,Please indicate how much you agree or disagree with the statements below. - Conservatives live in a different world from those of us siding with Liberals.
+W3_AFFLPOL_3,Please indicate how much you agree or disagree with the statements below. - Conservatives act in ways that those of us siding with Liberals could never understand.
+W3_AFFLPOL_4,"Please indicate how much you agree or disagree with the statements below. - As someone who sides with Liberals, I would not want to be friends with someone who was a Conservative."
+W3_AFFLPOL_5,"Please indicate how much you agree or disagree with the statements below. - If I found out a friend of mine was a Conservative, I would want to stop spending time with them."
+W3_AFFLPOL_6,"Please indicate how much you agree or disagree with the statements below. - Although I do not agree with their political views, there are people I like who are Conservative."
+W3_AFFLPOL_7,Please indicate how much you agree or disagree with the statements below. - My identity as someone who sides with Liberals is connected to my core moral beliefs.
+W3_AFFLPOL_8,Please indicate how much you agree or disagree with the statements below. - My identity as someone who sides with Liberals reflects my beliefs about the difference between right and wrong.
+W3_AFFLPOL_9,Please indicate how much you agree or disagree with the statements below. - My identity as someone who sides with Liberals is rooted in moral principles.
+W3_AFFCPOL_1,Please indicate how much you agree or disagree with the statements below. - I feel as though Liberals are very different from Conservatives.
+W3_AFFCPOL_2,Please indicate how much you agree or disagree with the statements below. - Liberals live in a different world from those of us who side with Conservatives.
+W3_AFFCPOL_3,Please indicate how much you agree or disagree with the statements below. - Liberals act in ways that those of us siding with Conservatives could never understand.
+W3_AFFCPOL_4,"Please indicate how much you agree or disagree with the statements below. - As someone who sides with Conservatives, I would not want to be friends with someone who was a Liberal."
+W3_AFFCPOL_5,"Please indicate how much you agree or disagree with the statements below. - If I found out a friend of mine was a Liberal, I would want to stop spending time with them."
+W3_AFFCPOL_6,"Please indicate how much you agree or disagree with the statements below. - Although I do not agree with their political views, there are people I like who are Liberals."
+W3_AFFCPOL_7,Please indicate how much you agree or disagree with the statements below. - My identity as someone who sides with Conservatives is connected to my core moral beliefs.
+W3_AFFCPOL_8,Please indicate how much you agree or disagree with the statements below. - My identity as someone who sides with Conservatives reflects my beliefs about the difference between right and wrong.
+W3_AFFCPOL_9,Please indicate how much you agree or disagree with the statements below. - My identity as someone who sides with Conservatives is rooted in moral principles.
+W3_BESTDAYS,"In general, do you think America’s best days are ahead of us or behind us?"
+W3_CITZFOCUSOPEN,Are there any other topics you think a Citizen’s Assembly should prioritize?
+W3_ELECTIONR,"Thinking about the way the president of the United States is elected, would you prefer to:"
+W3_DOV_Respect,DOV_Respect
+W3_DOV_Trust,DOV_Trust
+W3_DOV_POLINT,DOV_PolIntt
+W3_DOV_Servants,DOV_Servants
+W3_DOV_ISSUES,DOV_ISSUES
+W3_DOV_Assembly,DOV_Assembly
+W3_DOV_CITENG,DOV_CITENG
+W3_DOV_TALKWITH,DOV_TALKWITH
+W3_DOV_Assembly_2,DOV_Assembly_2
+W3_DOV_ELECT,DOV_ELECT
+W3_DOV_BigProblem,DOV_BigProblem
+ppage,Age
+ppeducat,Education (highest completed)
+ppeduc5,Education
+ppethm,"Race/Ethnicity, Census categories"
+ppgender,Gender
+pphhsize,Household Size
+pphouse4,Housing type
+ppinc7,Household Income
+ppmarit5,Marital Status
+ppmsacat,MSA Status
+ppreg4,Region 4 - Based On State Of Residence
+pprent,Ownership status of living quarters
+ppstaten,State
+ppemploy,Employment
+ppt18ov,Total number of HH members age 18 or older
+ppkid017,Presence of Household Members - Children 0-17
+xhispan,xhispan
+xacslang,Language proficiency
+xspanish,Survey Language
+urb_sub_rur,
+candidate2020,Which candidate did you vote for in the 2020 Presidential election?
+ppracem,"Race, Census categories"
+ppgender3,Are you...?
+VoteGeneral_2022,L2 Voter File: Vote in General Election 2022
+VoteGeneral_2020,L2 Voter File: Vote in General Election 2020
+General_2018,
+VoteGeneral_2016,L2 Voter File: Vote in General Election 2016
+VoterFilePartyID,L2 Voter File: Vote Party Identification
+ppp20197,QEG22: Are you a citizen of the United States?
+ppcmdate_w2,Date member completed survey
+fips,FIPS code: 2020 Census
+tract_str,
+alcohol,Number of alcohol drinks in the past week (Servings)
+CDID,
+AssemblyId,
+SenateId,
+racecat5,"Race/Ethnicity, Census categories"
+xwhites,
+xblacks,
+xhispanic,
+xother,
+xfemale,
+xmale,
+gender,Gender
+party3,
+party5,
+xeduc4,Education (highest completed)
+xeduc5,Education
+xdegree,
+xage,
+agecat1,
+agecat5,
+xhhincome,Household Income
+W1_HFClust,Wave 1 Clusters
+W2_HFClust,Wave 2 Clusters
+W3_HFClust,Wave 3 Clusters

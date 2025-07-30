@@ -79,6 +79,9 @@ data/*
 example_visualizations/exports/
 *.sav
 *.csv
+# IMPORTANT: Force include all settings files regardless of CSV ignore rule
+!wave_visualizer/settings/**/*.csv
+!wave_visualizer/settings/.gitkeep
 *.parquet
 *.log
 bandit-report.json

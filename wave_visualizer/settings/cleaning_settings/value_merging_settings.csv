@@ -1,0 +1,7 @@
+column_name,source_value,target_value
+PID1,Something else,Independent
+PID1,Other,Independent
+PID1,Strong Democrat,Democrat
+PID1,Weak Democrat,Democrat
+party_affiliation,No preference,Independent
+party_affiliation,Neither,Independent

@@ -1,0 +1,15 @@
+variable_name,value_name,color_hex,description
+PID1_labeled,Republican,#d62728,Color for Republican
+PID1_labeled,Democrat,#1f77b4,Color for Democrat
+PID1_labeled,Independent,#2ca02c,Color for Independent
+PID1_labeled,Strong Republican,#d62728,Color for Strong Republican
+PID1_labeled,Strong Democrat,#1f77b4,Color for Strong Democrat
+PID1_labeled,Weak Republican,#ff9999,Color for Weak Republican
+PID1_labeled,Weak Democrat,#87ceeb,Color for Weak Democrat
+PID1_labeled,Other,#888888,Color for Other
+PID1_labeled,Libertarian,#800080,Color for Libertarian
+PID1_labeled,Test_Value,#123456,Color for Test_Value
+HFClust_labeled,Thriving,#2E8B57,Color for Thriving
+HFClust_labeled,Struggling,#FF8C00,Color for Struggling
+HFClust_labeled,Suffering,#dc143c,Color for Suffering
+HFClust_labeled,Moderately mentally healthy,#90EE90,Color for Moderately mentally healthy

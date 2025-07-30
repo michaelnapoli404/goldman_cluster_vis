@@ -1,0 +1,20 @@
+# GITKEEP: FORCE TRACKING OF ENTIRE SETTINGS DIRECTORY
+#
+# This file ensures the settings directory and ALL its contents are tracked in Git,
+# OVERRIDING any .gitignore rules that would normally exclude CSV files.
+#
+# The .gitignore file contains "*.csv" which would ignore important settings files,
+# but this directory has explicit exceptions:
+#   !wave_visualizer/settings/**/*.csv
+#   !wave_visualizer/settings/.gitkeep
+#
+# Critical settings files that MUST be tracked:
+# - visualization_settings/wave_definitions.csv (wave configurations)
+# - visualization_settings/value_color_mappings.csv (color schemes)
+# - cleaning_settings/missing_value_settings.csv (data cleaning decisions)
+# - cleaning_settings/value_merging_settings.csv (category merging rules)
+# - metadata_output/variable_labels.csv (SPSS variable descriptions)
+# - metadata_output/value_labels.csv (SPSS value mappings)
+# - processed_data.csv (cleaned dataset)
+#
+# This ensures the package configuration is always preserved in version control. 
